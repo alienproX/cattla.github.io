@@ -1,1 +1,0 @@
-export newsList from './news' 
