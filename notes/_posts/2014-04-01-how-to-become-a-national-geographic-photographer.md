@@ -1,7 +1,6 @@
 ---
 layout: default
 title: 如何成为国家地理摄影师
-category: wine-and-roses
 ---
 __问题:__ 我是如何成为一名国家地理（National Geographic）的全职摄影师？
 
