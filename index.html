@@ -1,25 +1,14 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <title>Saka's Safe House</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="stylesheets/index.css" media="screen">
-    </head>
-    <body>
-        <section class="page-header">
-            <h1>SAKA</h1>
-            <ul>
-                <li>
-                    <a href="/notes/">Notes</a>
-                </li>
-                <li>
-                    <a href="/notes/about.html">About</a>
-                </li>
-                <li>
-                    <a href="https://github.com/cattla/">Github</a>
-                </li>
-            </ul>
-        </section>
-    </body>
-</html>
+---
+layout: default
+title: 我的Blog
+---
+
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+    {% for post in site.posts %}
+        <li>{{ post.date | date_to_string }}
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
