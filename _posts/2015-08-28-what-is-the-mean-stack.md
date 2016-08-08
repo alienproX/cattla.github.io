@@ -213,7 +213,6 @@ app.controller('MainCtrl',function(StarWarsFactory) {
 接着创建一个 index.html 的文件至于跟文件目录：
 
 {% highlight html %}
-{% raw %}
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -227,23 +226,22 @@ app.controller('MainCtrl',function(StarWarsFactory) {
       <ul>
         <li ng-repeat="item in m.charList">
           <span ng-if="item.side === 'Light'">
-            {{item.name}}
-            {{item.surname}}
+            {{ "{{item.name}} "}}
+            {{ "{{{{item.surname}} "}}
             uses
-            {{item.weapon}}
+            {{ "{{item.weapon}} "}}
           </span>
           <span ng-if="item.side === 'Dark'">
             Darth
-            {{item.sith_name}}
+            {{ "{{item.sith_name}} "}}
             uses
-            {{item.weapon}}
+            {{ "{{item.weapon}} "}}
           </span>
         </li>
       </ul>
     </div>
   </body>
 </html>
-{% endraw %}
 {% endhighlight %}
 
 最后，把 index.html 嵌入到 Express 里面，采用读取文本的方式。
