@@ -51,16 +51,16 @@ __第一个 Express 服务__
 接着开始编写 server.js ， 如下代码：
 
 {% highlight javascript %}
-	var express = require('express'),
-	    app = express();
+var express = require('express'),
+    app = express();
 
-	app.get('/', function(req, res) {
-	    res.send("Hello from Express");
-	});
+app.get('/', function(req, res) {
+    res.send("Hello from Express");
+});
 
-	app.listen(3000, function() {
-	    console.log("Server ready. Listening on port 3000");
-	});
+app.listen(3000, function() {
+    console.log("Server ready. Listening on port 3000");
+});
 {% endhighlight %}
 
 保存之后，然后在命令行运行 npm start，通过 http://localhost:3000 就可以看到以上代码输出的 Hello from Express 。除了用 `npm start`，还可以使用 `node server` ，`node server.js`， `node ./server` 来启动该服务。
@@ -78,32 +78,32 @@ __使用 MongoDB 数据库__
 接着开始创建一个数据库，星球大战，并填入数据，执行以下代码：
 
 {% highlight javascript %}
-	use starwars;
+use starwars;
 
-	db.character.insert({
-	    name: "Luke",
-	    surname: "Skywalker",
-	    side: "Light",
-	    weapon: "Lightsaber"
-	});
+db.character.insert({
+    name: "Luke",
+    surname: "Skywalker",
+    side: "Light",
+    weapon: "Lightsaber"
+});
 
-	db.character.insert({
-	    name: "Yoda",
-	    side: "Light",
-	    weapon: "Lightsaber"
-	});
+db.character.insert({
+    name: "Yoda",
+    side: "Light",
+    weapon: "Lightsaber"
+});
 
-	db.character.insert({
-	    sith_name: "Vader",
-	    side: "Dark",
-	    weapon: "Lightsaber"
-	});
+db.character.insert({
+    sith_name: "Vader",
+    side: "Dark",
+    weapon: "Lightsaber"
+});
 
-	db.character.insert({
-	    sith_name: "Sidious",
-	    side: "Dark",
-	    weapon: "Force lightning"
-	});
+db.character.insert({
+    sith_name: "Sidious",
+    side: "Dark",
+    weapon: "Force lightning"
+});
 {% endhighlight %}
 
 我们可以看出，在所有记录中，并没有相同的 key，Luke 和 Yoda 也没有 sith_name 这个字段。这在 MongoDB 中是不会报错的，只要插入的是合法的 Javascript 对象。
@@ -126,27 +126,27 @@ __使用 MongoDB 数据库__
 一个完整的集合读取代码如下：
 
 {% highlight javascript %}
-	var monk = require('monk');
+var monk = require('monk');
 
-	var db = monk('localhost:27017/starwars');
-	var swChars = db.get('character');
+var db = monk('localhost:27017/starwars');
+var swChars = db.get('character');
 
-	var express = require('express'),
-	  app = express();
+var express = require('express'),
+  app = express();
 
-	app.get('/character', function(req, res) {
-	  swChars.find({}, function(err, docs) {
-	    if (err == null) {
-	      res.json(docs);
-	    } else {
-	      console.log(err);
-	    }
-	  });
-	});
+app.get('/character', function(req, res) {
+  swChars.find({}, function(err, docs) {
+    if (err == null) {
+      res.json(docs);
+    } else {
+      console.log(err);
+    }
+  });
+});
 
-	app.listen(3000, function() {
-	  console.log("Server ready. Listening on port 3000");
-	});
+app.listen(3000, function() {
+  console.log("Server ready. Listening on port 3000");
+});
 {% endhighlight %}
 
 运行 `node server` 后可以浏览 http://localhost:3000/character ，就可以看到输出的一个 JSON 字符串。上面是使用 find() 这个函数来查询 swChars，第一个参数是查询规则（上面为空），是一个 javascript 对象，第二个参数是一个回调函数，查询完成后调用。
@@ -176,73 +176,73 @@ __在前端布置 AngularJS__
 接着创建一个 Angular 工厂，用来读取刚才创建的 API，路径为：assets/js/services/StarWarsFactory.js。代码如下：
 
 {% highlight javascript %}
-	app.factory('StarWarsFactory', function ($http) {
-	  return {
-	    characters: function () {
-	      return $http.get('/character');
-	    },
+app.factory('StarWarsFactory', function ($http) {
+  return {
+    characters: function () {
+      return $http.get('/character');
+    },
 
-	    jedi: function () {
-	      return $http.get('/jedi');
-	    }
-	  }
-	});
+    jedi: function () {
+      return $http.get('/jedi');
+    }
+  }
+});
 {% endhighlight %}
 
 接着创建控制器，MainCtrl.js，至于文件夹 controllers 中。代码如下：
 
 {% highlight javascript %}
-	app.controller('MainCtrl',function(StarWarsFactory) {
-	  var self = this;
-	  StarWarsFactory.characters().success(function(data) {
-	    self.charList = data;
-	  });
-	});
+app.controller('MainCtrl',function(StarWarsFactory) {
+  var self = this;
+  StarWarsFactory.characters().success(function(data) {
+    self.charList = data;
+  });
+});
 {% endhighlight %}
 
 接着创建一个 index.html 的文件至于跟文件目录：
 
 {% highlight html %}
-	<!DOCTYPE html>
-	<html lang="en-US">
-	  <head>
-	    <script src="bower_components/angular/angular.js"></script>
-	    <script src="assets/js/ngapp.js"></script>
-	    <script src="assets/js/services/StarWarsFactory.js"></script>
-	    <script src="assets/js/controllers/MainCtrl.js"></script>
-	  </head>
-	  <body ng-app="starwars">
-	    <div ng-controller="MainCtrl as m">
-	      <ul>
-	        <li ng-repeat="item in m.charList">
-	          <span ng-if="item.side === 'Light'">
-	            {{item.name}}
-	            {{item.surname}}
-	            uses
-	            {{item.weapon}}
-	          </span>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="assets/js/ngapp.js"></script>
+    <script src="assets/js/services/StarWarsFactory.js"></script>
+    <script src="assets/js/controllers/MainCtrl.js"></script>
+  </head>
+  <body ng-app="starwars">
+    <div ng-controller="MainCtrl as m">
+      <ul>
+        <li ng-repeat="item in m.charList">
+          <span ng-if="item.side === 'Light'">
+            {{item.name}}
+            {{item.surname}}
+            uses
+            {{item.weapon}}
+          </span>
 
-	          <span ng-if="item.side === 'Dark'">
-	            Darth
-	            {{item.sith_name}}
-	            uses
-	            {{item.weapon}}
-	          </span>
-	        </li>
-	      </ul>
-	    </div>
-	  </body>
-	</html>
+          <span ng-if="item.side === 'Dark'">
+            Darth
+            {{item.sith_name}}
+            uses
+            {{item.weapon}}
+          </span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
 {% endhighlight %}
 
 最后，把 index.html 嵌入到 Express 里面，采用读取文本的方式。
 
 {% highlight javascript %}
-	  app.use('/', express.static(__dirname + '/'));
+app.use('/', express.static(__dirname + '/'));
 
-	  app.get('/', function (req, res) {
-	    res.sendFile(path.join(__dirname + "/index.html"));
-	  });
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + "/index.html"));
+});
 {% endhighlight %}
 
 此时重运行 server.js 然后访问 http://localhost:3000 就可以看到从 mongoDB 输出的内容。
