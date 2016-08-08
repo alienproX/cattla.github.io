@@ -65,3 +65,13 @@ a:hover {
     right: 0px;
     cursor: pointer;
 }
+
+.content ul{
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+}
+
+.content ul li{
+color: #888;
+}
