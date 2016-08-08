@@ -44,7 +44,7 @@ __第一个 Express 服务__
 
 第二步：通过运行命令，添加 express 依赖。
 
-{% highlight javascript %}
+{% highlight %}
 npm install express —save
 {% endhighlight %}
 
@@ -115,20 +115,20 @@ db.character.insert({
 接着使用 monk 连接数据库，并输出数据。在 server.js 的头部添加一个依赖：
 
 {% highlight javascript %}
-	var monk = require('monk');
+var monk = require('monk');
 {% endhighlight %}
 
 接着再连接到刚才创建的数据库：
 
 {% highlight javascript %}
-	var swChars = monk('localhost:27017/starwars').get('character');
+var swChars = monk('localhost:27017/starwars').get('character');
 {% endhighlight %}
 
 或者可以使用以下写法，表达更直观：
 
 {% highlight javascript %}
-	var db = monk('localhost:27017/starwars');
-	var swChars = db.get(‘character');
+var db = monk('localhost:27017/starwars');
+var swChars = db.get(‘character');
 {% endhighlight %}
 
 第一行的作用是，连接到数据库 starwars，一个数据库里可以有多个集合，mongoDB 中多个文档构成集合，多个集合构成数据库。第二行的作用是，指定连接到 character 这个集合。
@@ -137,12 +137,11 @@ db.character.insert({
 
 {% highlight javascript %}
 var monk = require('monk');
-
 var db = monk('localhost:27017/starwars');
 var swChars = db.get('character');
 
 var express = require('express'),
-  app = express();
+  	app = express();
 
 app.get('/character', function(req, res) {
   swChars.find({}, function(err, docs) {
@@ -193,7 +192,6 @@ app.factory('StarWarsFactory', function ($http) {
     characters: function () {
       return $http.get('/character');
     },
-
     jedi: function () {
       return $http.get('/jedi');
     }
@@ -228,16 +226,20 @@ app.controller('MainCtrl',function(StarWarsFactory) {
       <ul>
         <li ng-repeat="item in m.charList">
           <span ng-if="item.side === 'Light'">
+					{% raw %}
             {{item.name}}
             {{item.surname}}
             uses
             #{{item.weapon}}
+						{% endraw %}
           </span>
           <span ng-if="item.side === 'Dark'">
             Darth
+						{% raw %}
             {{item.sith_name}}
             uses
             {{item.weapon}}
+						{% endraw %}
           </span>
         </li>
       </ul>
@@ -250,7 +252,6 @@ app.controller('MainCtrl',function(StarWarsFactory) {
 
 {% highlight javascript %}
 app.use('/', express.static(__dirname + '/'));
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
