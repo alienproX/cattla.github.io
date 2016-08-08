@@ -1,7 +1,15 @@
 body {
-    background: #ecedf0;
+    background: #faf6ec;
     font: 16px/1.7 normal normal;
     font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
+}
+
+header {
+    text-align: left;
+    background-color: #584b4f;
+    color: #faf6ec;
+    font-size: 14px;
+    height: 43px;
 }
 
 .content {
@@ -15,6 +23,7 @@ body {
     margin: 30px auto;
     max-width: 800px;
     color: #555;
+    margin-top: 75px;
 }
 
 .content h1 {
@@ -26,10 +35,11 @@ body {
 .content p {
     margin-bottom: 20px;
 }
+
 .content p img {
-  display: block;
-margin: 0px auto;
-max-width: 100%;
+    display: block;
+    margin: 0px auto;
+    max-width: 100%;
 }
 
 a {
@@ -42,10 +52,10 @@ a:hover {
     ;
 }
 
-blockquote{
-  border-left: 2px solid #dedede;
-padding-left: 20px;
-color: #888;
+blockquote {
+    border-left: 2px solid #dedede;
+    padding-left: 20px;
+    color: #888;
 }
 
 @media screen and (max-width: 800px) {

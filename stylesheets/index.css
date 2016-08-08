@@ -66,12 +66,16 @@ a:hover {
     cursor: pointer;
 }
 
-.content ul{
-  display: inline-block;
-  text-align: left;
-  list-style: none;
+.content ul {
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+    margin-top: 20px;
 }
 
-.content ul li{
-color: #888;
+.content ul li {
+    color: #888;
+    border-bottom: 1px dotted #ddd;
+    padding: 15px 0px;
+
 }
