@@ -1,5 +1,5 @@
 body {
-    background: #faf6ec;
+    background: #faf6ed;
     font: 16px/1.7 normal normal;
     font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
 }
@@ -10,6 +10,10 @@ header {
     color: #faf6ec;
     font-size: 14px;
     height: 43px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 10;
 }
 
 .content {
@@ -19,7 +23,7 @@ header {
     margin-bottom: 10px;
     padding: 40px 50px;
     position: relative;
-    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-color: #efeae1 #ece7de #eae5db;
     margin: 30px auto;
     max-width: 800px;
     color: #555;
