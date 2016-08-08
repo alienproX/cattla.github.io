@@ -27,6 +27,10 @@ header {
     display: block;
     float: left;
 }
+.logo a{
+  color: #efeae1;
+  text-decoration: none;
+}
 
 nav {
     float: right;
