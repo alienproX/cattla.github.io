@@ -37,11 +37,18 @@ a:hover {
     ;
 }
 
+blockquote{
+  border-left: 2px solid #dedede;
+padding-left: 20px;
+color: #888;
+}
+
 @media screen and (max-width: 800px) {
     .content {
         margin: 0px;
         border-radius: 0px;
         border: none;
+        padding: 20px;
         border-bottom: 1px solid #d0d1d5;
     }
 }
