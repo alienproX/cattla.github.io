@@ -234,7 +234,6 @@ app.controller('MainCtrl',function(StarWarsFactory) {
           </span>
           <span ng-if="item.side === 'Dark'">
             Darth
-						{% raw %}
             {{item.sith_name}}
             uses
             {{item.weapon}}
