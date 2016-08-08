@@ -1,11 +1,26 @@
----
-layout: index
-title: Saka's Safe House
----
-<ul>
-    {% for post in site.posts %}
-        <li>{{ post.date | date: "%Y-%m-%d" }}
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        </li>
-    {% endfor %}
-</ul>
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Saka's Safe House</title>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css"/>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/index.css?v=2"/>
+    </head>
+    <body>
+        <section class="page-header">
+            <h1>SAKA</h1>
+            <ul>
+                <li>
+                    <a href="/notes.html">Notes</a>
+                </li>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li>
+                    <a href="https://github.com/cattla/">Github</a>
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>
