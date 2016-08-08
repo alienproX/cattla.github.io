@@ -16,6 +16,31 @@ header {
     z-index: 10;
 }
 
+.navWrap {
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+.logo {
+    font-size: 16px;
+    margin: 9px 0px 0px 0px;
+    display: block;
+    float: left;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 15px;
+    margin-top: 7px;
+    color: #efeae1;
+}
+
 .content {
     background: #fff;
     border: 1px solid #ebebeb;
