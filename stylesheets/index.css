@@ -20,7 +20,7 @@ h1 {
     margin: 200px auto 0px auto;
 }
 
-ul {
+section ul {
     list-style: none;
     width: 250px;
     border-top: 1px solid #e9e9e9;
@@ -29,17 +29,39 @@ ul {
     text-align: center;
 }
 
-li {
+section li {
     display: inline-block;
     vertical-align: top;
     margin: 0px 15px;
     font-size: 14px;
 }
 
-a{
-  color: #40a977;
-  text-decoration: none;
+a {
+    color: #40a977;
+    text-decoration: none;
 }
-a:hover{
-  text-decoration: underline;
+
+a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    top: 0px;
+    bottom: 0px;
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    font-size: 36px;
+    color: #666;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 42px;
+    right: 0px;
+    cursor: pointer;
 }
