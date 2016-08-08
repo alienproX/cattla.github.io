@@ -77,6 +77,7 @@ __使用 MongoDB 数据库__
 
 接着开始创建一个数据库，星球大战，并填入数据，执行以下代码：
 
+{% highlight javascript %}
 	use starwars;
 
 	db.character.insert({
@@ -103,6 +104,7 @@ __使用 MongoDB 数据库__
 	    side: "Dark",
 	    weapon: "Force lightning"
 	});
+{% endhighlight %}
 
 我们可以看出，在所有记录中，并没有相同的 key，Luke 和 Yoda 也没有 sith_name 这个字段。这在 MongoDB 中是不会报错的，只要插入的是合法的 Javascript 对象。
 
@@ -123,6 +125,7 @@ __使用 MongoDB 数据库__
 
 一个完整的集合读取代码如下：
 
+{% highlight javascript %}
 	var monk = require('monk');
 
 	var db = monk('localhost:27017/starwars');
@@ -144,6 +147,7 @@ __使用 MongoDB 数据库__
 	app.listen(3000, function() {
 	  console.log("Server ready. Listening on port 3000");
 	});
+{% endhighlight %}
 
 运行 `node server` 后可以浏览 http://localhost:3000/character ，就可以看到输出的一个 JSON 字符串。上面是使用 find() 这个函数来查询 swChars，第一个参数是查询规则（上面为空），是一个 javascript 对象，第二个参数是一个回调函数，查询完成后调用。
 
@@ -171,6 +175,7 @@ __在前端布置 AngularJS__
 
 接着创建一个 Angular 工厂，用来读取刚才创建的 API，路径为：assets/js/services/StarWarsFactory.js。代码如下：
 
+{% highlight javascript %}
 	app.factory('StarWarsFactory', function ($http) {
 	  return {
 	    characters: function () {
@@ -182,18 +187,22 @@ __在前端布置 AngularJS__
 	    }
 	  }
 	});
+{% endhighlight %}
 
 接着创建控制器，MainCtrl.js，至于文件夹 controllers 中。代码如下：
 
+{% highlight javascript %}
 	app.controller('MainCtrl',function(StarWarsFactory) {
 	  var self = this;
 	  StarWarsFactory.characters().success(function(data) {
 	    self.charList = data;
 	  });
 	});
+{% endhighlight %}
 
 接着创建一个 index.html 的文件至于跟文件目录：
 
+{% highlight html %}
 	<!DOCTYPE html>
 	<html lang="en-US">
 	  <head>
@@ -224,14 +233,17 @@ __在前端布置 AngularJS__
 	    </div>
 	  </body>
 	</html>
+{% endhighlight %}
 
 最后，把 index.html 嵌入到 Express 里面，采用读取文本的方式。
 
+{% highlight javascript %}
 	  app.use('/', express.static(__dirname + '/'));
 
 	  app.get('/', function (req, res) {
 	    res.sendFile(path.join(__dirname + "/index.html"));
 	  });
+{% endhighlight %}
 
 此时重运行 server.js 然后访问 http://localhost:3000 就可以看到从 mongoDB 输出的内容。
 
