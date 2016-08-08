@@ -26,6 +26,7 @@ __第一个 Express 服务__
 
 运行时，需要回答一些问题（比如name，version，description，main …），这些是用来创建一个叫做 `package.json` 文件，该文件的作用是定义依赖的 Node.js 模块，可以通过 npm install 安装这些依赖，以此来保证你的项目正常运行。如果要将开发的模块发布到 http://npmjs.org/ ，这个文件也是必须的。一个 package.json 参考如下：
 
+{% highlight json %}
 	{
 	  "name": "sp-mean",
 	  "version": "0.1.0",
@@ -37,6 +38,7 @@ __第一个 Express 服务__
 	  "author": "Aldo Ziflaj",
 	  "license": "None"
 	}
+{% endhighlight %}
 
 `"main": “server.js"` 这一句是用来声明，运行在服务器的主要文件是 server.js。`"start": "node ./server”` 这句意思是，可以通过命令 `node ./server` 来运行 server.js 这个文件。
 
@@ -48,6 +50,7 @@ __第一个 Express 服务__
 
 接着开始编写 server.js ， 如下代码：
 
+{% highlight javascript %}
 	var express = require('express'),
 	    app = express();
 
@@ -58,6 +61,7 @@ __第一个 Express 服务__
 	app.listen(3000, function() {
 	    console.log("Server ready. Listening on port 3000");
 	});
+{% endhighlight %}
 
 保存之后，然后在命令行运行 npm start，通过 http://localhost:3000 就可以看到以上代码输出的 Hello from Express 。除了用 `npm start`，还可以使用 `node server` ，`node server.js`， `node ./server` 来启动该服务。
 
