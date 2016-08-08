@@ -44,9 +44,7 @@ __第一个 Express 服务__
 
 第二步：通过运行命令，添加 express 依赖。
 
-{% highlight %}
-npm install express —save
-{% endhighlight %}
+	npm install express —save
 
 运行结束后，就可以看到，在刚才创建的文件里多了一个 `node_modules` 的文件夹。
 
@@ -71,9 +69,7 @@ __使用 MongoDB 数据库__
 
 开始之前首先确保安装了 `MongoDB`，具体可以访问其官网 http://mongodb.org 。要在 Express 和 MongoDB 之间建立连接，必须安装个依赖，相关的依赖有很多，比如 mongodb，monk，mongoose。在此我们用 `monk` 做示范，开始执行以下命令：
 
-{% highlight %}
-npm install monk —save
-{% endhighlight %}
+	npm install monk —save
 
 这段可能需要比较长的时间才能安装完成，完成之后就会发现，在 node_modules 目录多了一个 monk 的文件夹。接着在命令行输入：
 
