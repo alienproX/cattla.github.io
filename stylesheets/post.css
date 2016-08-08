@@ -28,6 +28,10 @@ header {
     float: left;
 }
 
+nav {
+    float: right;
+}
+
 nav ul li {
     float: left;
 }
