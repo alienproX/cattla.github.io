@@ -27,9 +27,15 @@ header {
     display: block;
     float: left;
 }
-.logo a{
-  color: #efeae1;
-  text-decoration: none;
+
+.logo a {
+    color: #efeae1;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #ffeb3b;
+    text-decoration: none;
 }
 
 nav {
@@ -49,6 +55,27 @@ nav ul li a {
     color: #efeae1;
 }
 
+.postList h3 {
+    border-bottom: 1px solid #ede9e1;
+    padding: 0px 0px 10px 5px;
+    margin-top: -10px;
+    color: #887f82;
+}
+
+.postList ul {
+    list-style: none;
+}
+
+.postList ul li {
+    border-bottom: 1px dotted #e6e4e5;
+    padding: 15px 5px;
+    color: #999;
+}
+
+.postList ul li a {
+    margin-left: 20px;
+}
+
 .content {
     background: #fff;
     border: 1px solid #ebebeb;
@@ -59,7 +86,7 @@ nav ul li a {
     border-color: #efeae1 #ece7de #eae5db;
     margin: 30px auto;
     max-width: 800px;
-    color: #555;
+    color: #66595c;
     margin-top: 75px;
 }
 
