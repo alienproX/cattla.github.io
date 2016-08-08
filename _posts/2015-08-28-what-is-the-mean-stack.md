@@ -209,6 +209,7 @@ app.controller('MainCtrl',function(StarWarsFactory) {
 接着创建一个 index.html 的文件至于跟文件目录：
 
 {% highlight html %}
+{% raw %}
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -238,6 +239,7 @@ app.controller('MainCtrl',function(StarWarsFactory) {
     </div>
   </body>
 </html>
+{% endraw %}
 {% endhighlight %}
 
 最后，把 index.html 嵌入到 Express 里面，采用读取文本的方式。
