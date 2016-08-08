@@ -133,14 +133,15 @@ blockquote {
 }
 
 .highlight {
-    background-color: #41434e;
-    color: #fff;
+    background-color: #383a44;
+    color: #9fd92f;
     max-width: 100%;
     overflow-x: auto;
     vertical-align: middle;
     border-radius: 4px;
     padding: 15px;
     margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 .highlight .hll {

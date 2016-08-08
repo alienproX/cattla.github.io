@@ -44,7 +44,9 @@ __第一个 Express 服务__
 
 第二步：通过运行命令，添加 express 依赖。
 
-	npm install express —save
+{% highlight javascript %}
+npm install express —save
+{% endhighlight %}
 
 运行结束后，就可以看到，在刚才创建的文件里多了一个 `node_modules` 的文件夹。
 
@@ -69,7 +71,9 @@ __使用 MongoDB 数据库__
 
 开始之前首先确保安装了 `MongoDB`，具体可以访问其官网 http://mongodb.org 。要在 Express 和 MongoDB 之间建立连接，必须安装个依赖，相关的依赖有很多，比如 mongodb，monk，mongoose。在此我们用 `monk` 做示范，开始执行以下命令：
 
-	npm install monk —save
+{% highlight javascript %}
+npm install monk —save
+{% endhighlight %}
 
 这段可能需要比较长的时间才能安装完成，完成之后就会发现，在 node_modules 目录多了一个 monk 的文件夹。接着在命令行输入：
 
@@ -110,16 +114,22 @@ db.character.insert({
 
 接着使用 monk 连接数据库，并输出数据。在 server.js 的头部添加一个依赖：
 
+{% highlight javascript %}
 	var monk = require('monk');
+{% endhighlight %}
 
 接着再连接到刚才创建的数据库：
 
+{% highlight javascript %}
 	var swChars = monk('localhost:27017/starwars').get('character');
+{% endhighlight %}
 
 或者可以使用以下写法，表达更直观：
 
+{% highlight javascript %}
 	var db = monk('localhost:27017/starwars');
 	var swChars = db.get(‘character');
+{% endhighlight %}
 
 第一行的作用是，连接到数据库 starwars，一个数据库里可以有多个集合，mongoDB 中多个文档构成集合，多个集合构成数据库。第二行的作用是，指定连接到 character 这个集合。
 
@@ -171,7 +181,9 @@ __在前端布置 AngularJS__
 
 第一个文件 ngapp.js 用来定义 AngularJS 应用，第二个文件夹是用来存放 AngularJS 控制器的地方，第三个文件夹是用来存放 AngularJS 服务（比如：factory）的地方。在第一个文件 ngapp.js 的代码为：
 
-	var app = angular.module('starwars', []);
+{% highlight javascript %}
+var app = angular.module('starwars', []);
+{% endhighlight %}
 
 接着创建一个 Angular 工厂，用来读取刚才创建的 API，路径为：assets/js/services/StarWarsFactory.js。代码如下：
 
@@ -219,9 +231,8 @@ app.controller('MainCtrl',function(StarWarsFactory) {
             {{item.name}}
             {{item.surname}}
             uses
-            {{item.weapon}}
+            #{{item.weapon}}
           </span>
-
           <span ng-if="item.side === 'Dark'">
             Darth
             {{item.sith_name}}
