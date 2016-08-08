@@ -71,7 +71,7 @@ __使用 MongoDB 数据库__
 
 开始之前首先确保安装了 `MongoDB`，具体可以访问其官网 http://mongodb.org 。要在 Express 和 MongoDB 之间建立连接，必须安装个依赖，相关的依赖有很多，比如 mongodb，monk，mongoose。在此我们用 `monk` 做示范，开始执行以下命令：
 
-{% highlight javascript %}
+{% highlight %}
 npm install monk —save
 {% endhighlight %}
 
@@ -128,7 +128,7 @@ var swChars = monk('localhost:27017/starwars').get('character');
 
 {% highlight javascript %}
 var db = monk('localhost:27017/starwars');
-var swChars = db.get(‘character');
+var swChars = db.get('character');
 {% endhighlight %}
 
 第一行的作用是，连接到数据库 starwars，一个数据库里可以有多个集合，mongoDB 中多个文档构成集合，多个集合构成数据库。第二行的作用是，指定连接到 character 这个集合。
