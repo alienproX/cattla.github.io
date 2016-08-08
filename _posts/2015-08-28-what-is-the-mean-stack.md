@@ -226,16 +226,16 @@ app.controller('MainCtrl',function(StarWarsFactory) {
       <ul>
         <li ng-repeat="item in m.charList">
           <span ng-if="item.side === 'Light'">
-            {{ "{{item.name}} "}}
-            {{ "{{{{item.surname}} "}}
+            {{item.name}}
+            {{item.surname}}
             uses
-            {{ "{{item.weapon}} "}}
+            {{item.weapon}}
           </span>
           <span ng-if="item.side === 'Dark'">
             Darth
-            {{ "{{item.sith_name}} "}}
+            {{item.sith_name}}
             uses
-            {{ "{{item.weapon}} "}}
+            {{item.weapon}}
           </span>
         </li>
       </ul>
