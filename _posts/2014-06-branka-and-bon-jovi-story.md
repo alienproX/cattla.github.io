@@ -3,7 +3,7 @@ layout: default
 title: Branka与Bon Jovi的故事
 ---
 
-![Alt text](https://i1.wp.com/www.billboard.com/files/styles/promo_650/public/field/image/jon-bon-jovi-branka-delic.jpg?w=500)
+![](https://i1.wp.com/www.billboard.com/files/styles/promo_650/public/field/image/jon-bon-jovi-branka-delic.jpg?w=500)
 
 Branka是Bon Jovi的一位女歌迷，今年8月份的时候，她架设了一个网站bon jovi walk me down the aisle（邦乔飞陪我走过地毯），她一直希望在她结婚的时候，她偶像Bon Jovi能够出现在婚礼上，然后牵着她的手，把她交付给男友。最近Branka在拉斯维加斯的Graceland教堂结婚了，为什么会是这个教堂？因为24年前Bon Jovi也是在这里结婚的。
 
