@@ -55,10 +55,6 @@ nav ul li a {
     color: #aaaaaa;
 }
 
-nav ul li a:hover {
-    color: #42a0d8;
-}
-
 .postList h3 {
     border-bottom: 1px solid #ede9e1;
     padding: 0px 0px 10px 5px;
@@ -90,7 +86,7 @@ nav ul li a:hover {
     border-color: #e5e5e5 #e4e4e4 #d4d4d6;
     margin: 30px auto;
     max-width: 800px;
-    color: #66595c;
+    color: #595f66;
     margin-top: 75px;
 }
 
@@ -102,6 +98,12 @@ nav ul li a:hover {
 
 .content p {
     margin-bottom: 20px;
+}
+
+.content p code {
+    background: #eff0f1;
+    padding: 0px 4px;
+    border-radius: 2px;
 }
 
 .content p img {
