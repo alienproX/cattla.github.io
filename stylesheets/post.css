@@ -1,15 +1,15 @@
 body {
-    background: #faf6ed;
+    background: #e8e8e8;
     font: 16px/1.7 normal normal;
     font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
 }
 
 header {
     text-align: left;
-    background-color: #584b4f;
+    background-color: #262731;
     color: #faf6ec;
     font-size: 14px;
-    height: 43px;
+    height: 45px;
     position: fixed;
     width: 100%;
     top: 0px;
@@ -23,7 +23,7 @@ header {
 
 .logo {
     font-size: 16px;
-    margin: 9px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
     display: block;
     float: left;
 }
@@ -51,8 +51,8 @@ nav ul li a {
     height: 30px;
     line-height: 30px;
     padding: 0px 15px;
-    margin-top: 7px;
-    color: #efeae1;
+    margin-top: 8px;
+    color: #9e9e9e;
 }
 
 .postList h3 {
@@ -139,8 +139,8 @@ blockquote {
     overflow-x: auto;
     vertical-align: middle;
     border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
     line-height: 1.6;
 }
 
