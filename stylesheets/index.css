@@ -12,7 +12,7 @@ body {
 h1 {
     width: 43px;
     height: 80px;
-    background: url(logo.png) top left no-repeat;
+    background: url(logo.png?v) top left no-repeat;
     background-size: 43px 80px;
     text-indent: -400px;
     overflow: hidden;
