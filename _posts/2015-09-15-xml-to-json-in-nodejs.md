@@ -52,7 +52,7 @@ __第四步：__ 运行
 
 你就可以在终端窗口看到转换后输出的 JSON 格式了。
 
-{% highlight json %}
+{% highlight javascript %}
 {
     note : {
         to: ['Tove'],
