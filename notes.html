@@ -4,8 +4,9 @@ title: 全部文章 -- acdc.me
 ---
 <ul>
     {% for post in site.posts %}
-        <li>{{ post.date | date: "%Y-%m-%d" }}
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <li>
+            <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            <div><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
         </li>
     {% endfor %}
 </ul>

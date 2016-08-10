@@ -31,6 +31,7 @@ header {
 .logo a {
     color: #efeae1;
     text-decoration: none;
+    margin-left: 10px;
 }
 
 .logo a:hover {
@@ -72,8 +73,14 @@ nav ul li a {
     color: #999;
 }
 
-.postList ul li a {
-    margin-left: 20px;
+.postList ul li span {
+    display: block;
+    float: left;
+    width: 85px;
+}
+
+.postList ul li div {
+    margin-left: 100px;
 }
 
 .content {
@@ -111,12 +118,23 @@ nav ul li a {
     margin: 0px auto;
     max-width: 100%;
 }
-.content ul{
-  margin: 0px 0px 20px 20px;
+
+.content ul {
+    margin: 0px 0px 20px 20px;
 }
+
 a {
     color: #40a977;
     text-decoration: none;
+}
+
+.copyRight {
+    color: #9E9E9E;
+    border-top: 1px solid #eee;
+    padding: 10px 0px 0px 0px;
+    margin-top: 30px;
+    margin-bottom: -10px;
+    font-size: 12px;
 }
 
 a:hover {
@@ -137,6 +155,9 @@ blockquote {
         border: none;
         padding: 20px;
         border-bottom: 1px solid #d0d1d5;
+    }
+    header {
+        position: relative;
     }
 }
 
