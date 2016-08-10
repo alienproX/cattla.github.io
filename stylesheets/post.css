@@ -111,7 +111,9 @@ nav ul li a {
     margin: 0px auto;
     max-width: 100%;
 }
-
+.content ul{
+  margin: 0px 0px 20px 20px;
+}
 a {
     color: #40a977;
     text-decoration: none;
@@ -139,7 +141,7 @@ blockquote {
 }
 
 .highlight {
-    background-color: #383a44;
+    background-color: #3a3c49;
     color: #9fd92f;
     max-width: 100%;
     overflow-x: auto;
