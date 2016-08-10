@@ -35,9 +35,7 @@ var message = require('util').format('Hello %s, how is your cat?', name);
 
 但是使用 ES6 你可以这样：
 
-{% highlight javascript %}
-var message = `Hello ${name}, how is your cat?`;
-{% endhighlight %}
+    var message = `Hello ${name}, how is your cat?`;
 
 怎么样？很任性吧！！！
 
