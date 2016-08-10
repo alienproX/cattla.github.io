@@ -54,7 +54,7 @@ __第四步：__ 运行
 
 {% highlight javascript %}
 {
-    note : {
+    note: {
         to: ['Tove'],
         from: ['Jani'],
         heading: ['Reminder'],
