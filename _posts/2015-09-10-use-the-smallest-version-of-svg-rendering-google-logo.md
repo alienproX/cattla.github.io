@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Branka与Bon Jovi的故事
+title: 如何使用最小的 SVG 绘制 Google 新版 Logo
 ---
 
 ![](/files/2015/google-old-logo.png)
