@@ -7,13 +7,13 @@ title: 在 Node JS 里把 XML 转换成 JSON 格式
 
 在 Node JS 里有很多的模块支持该功能，本文使用 __xml2js__ 模块。
 
-__第一步：__安装
+__第一步：__ 安装
 
 使用 npm 安装，在命令行使用以下命令。
 
-  npm install xml2js
+    npm install xml2js
 
-第二步：创建一个 test.xml 测试文件
+__第二步：__ 创建一个 test.xml 测试文件
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -25,7 +25,7 @@ __第一步：__安装
 </note>
 {% endhighlight %}
 
-__第三步：__编写脚本
+__第三步：__ 编写脚本
 
 编写一个 Node JS 文件，代码如下：
 
@@ -44,11 +44,11 @@ fs.readFile(__dirname + '/test.xml', function(err, data) {
 
 将以上代码储存为 xml2json.js。
 
-__第四步：__运行
+__第四步：__ 运行
 
 一切都准备好了，在命令行输入：
 
-  node xml2json.js
+    node xml2json.js
 
 你就可以在终端窗口看到转换后输出的 JSON 格式了。
 
