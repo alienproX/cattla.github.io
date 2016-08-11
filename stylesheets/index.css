@@ -6,25 +6,24 @@ html {
 }
 
 body {
-    background: #e8e8e8;
+    background: #fff;
 }
 
 h1 {
-    width: 43px;
-    height: 80px;
-    background: url(logo.png?v) top left no-repeat;
-    background-size: 43px 80px;
+    width: 100px;
+    height: 100px;
+    background: url(icon.png?v) top left no-repeat;
+    background-size: 100px 100px;
     text-indent: -400px;
     overflow: hidden;
     margin: 200px auto 0px auto;
-    opacity: .5;
 }
 
 section ul {
     list-style: none;
     width: 250px;
-    border-top: 1px solid #cecece;
-    margin: 10px auto 0px auto;
+    border-top: 1px solid #eee;
+    margin: 0px auto 0px auto;
     padding: 15px;
     text-align: center;
     position: relative;
