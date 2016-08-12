@@ -449,7 +449,7 @@ __第十步：__ 链接调整
 
 	<Link to={`/post/${this.props.slug}`}>{this.props.title}</Link>
 
-差别只有两个，`a` 标签变成了 `Link` ,属性 `href` 变成了 `to`。注意这个 render 里有两个 a 链接。
+差别只有两个，`a` 标签变成了 `Link` ,属性 `href` 变成了 `to`。注意这个 `render` 里有两个 `a` 链接。
 
 最后，运行 `npm start`，哈利路亚！！！
 
