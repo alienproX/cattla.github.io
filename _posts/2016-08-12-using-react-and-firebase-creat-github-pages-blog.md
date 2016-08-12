@@ -443,11 +443,11 @@ __第十步：__ 链接调整
 
 接着把这一行：
 
-	<a href={`/post/${this.props.slug}`}>{this.props.title}</a>
+	<a href={'/post/${this.props.slug}'}>{this.props.title}</a>
 
 改成
 
-	<Link to={`/post/${this.props.slug}`}>{this.props.title}</Link>
+	<Link to={'/post/${this.props.slug}'}>{this.props.title}</Link>
 
 差别只有两个，`a` 标签变成了 `Link` ,属性 `href` 变成了 `to`。注意这个 `render` 里有两个 `a` 链接。
 
