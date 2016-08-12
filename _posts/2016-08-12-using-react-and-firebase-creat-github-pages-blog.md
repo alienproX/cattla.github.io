@@ -453,4 +453,4 @@ __第十步：__ 链接调整
 
 最后，运行 `npm start`，哈利路亚！！！
 
-在线 demo -->  <a href="https://mblur.com/demos/reactMiniBlog/" target="_blank">https://mblur.com/demos/reactMiniBlog/</a>
+完整代码 -->  <a href="https://github.com/cattla/react-firebase-blog" target="_blank">https://github.com/cattla/react-firebase-blog</a>
