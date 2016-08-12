@@ -6,8 +6,6 @@ via: http://ghostffco.de/mini-github-pages-blog-using-react-firebase/
 
 把博客托管在 Github 的一般做法是使用 Github Page 自带的 <a href="http://jekyllrb.com" target="_blank">jekyllrb</a> 来生成页面，比如你现在看的这个网站。现在我要接受另一种方法，使用 React 和 Firebase。
 
-哎！心情略差！！
-
 关于 React 就不多介绍了，已经有三年历史了，面子书出品，目前人气依旧旺盛。而 Firebase 是一个储存数据和管理 API 的工具网站（简单理解是这样），现在归于孤狗旗下了。看到这，应该明白这种博客形式的实现原理了吧.....
 
 废话不多说，Let's Rock N' Roll...
@@ -91,29 +89,29 @@ __第二步：__ 从 React 开始
 
 1，安装 `create-react-app`，全局安装
 
-		npm install -g create-react-app
+	npm install -g create-react-app
 
 2，然后终端进入某个目录，运行
 
-		create-react-app blog
+	create-react-app blog
 
 可以看到该目录多了一个 `blog` 的文件夹，文件结构如下
 
-		blog
-		├── package.json
-		├── node_modules
-		|	└── ...
-		├── favicon.ico
-		├── index.html
-		├── README.md
-		├── src
-		|	└── ...
-		└──
+	blog
+	├── package.json
+	├── node_modules
+	|	└── ...
+	├── favicon.ico
+	├── index.html
+	├── README.md
+	├── src
+	|	└── ...
+	└──
 
 这个过程可能花费时间会长一点，因为依赖也安装好了。接着开始终端运行：
 
-		cd blog
-		npm start
+	cd blog
+	npm start
 
 此时整个项目已经可以运行了，地址为： http://localhost:3000
 
@@ -250,7 +248,7 @@ __第五步：__ 添加主组件 App.js
 
 安装 firebase 模块
 
-		npm i firebase --save-dev
+	npm i firebase --save-dev
 
 然后在 `App.js` 文件，把必需的 Firebase 模块和连接配置模块 import 进去。之后开始配置 Firebase，初始化一下。然后把原来的 React 组件移除掉，换上自己的。并且设置 `state` 的初始化，和 `componentDidMount()` 函数，完整代码如下：
 
@@ -441,17 +439,17 @@ __第十步：__ 链接调整
 
 使用 `react-router` 路由，要在常规的 HTML `a` 标签做个小调整。进入文件夹 src/Components/  打开 `Posts.js` 文件，先把 `react-router` 的 `Link` import 进去。
 
-		import { Link } from "react-router";
+	mport { Link } from "react-router";
 
 接着把这一行：
 
-		<a href={`/post/${this.props.slug}`}>{this.props.title}</a>
+	<a href={`/post/${this.props.slug}`}>{this.props.title}</a>
 
 改成
 
-		<Link to={`/post/${this.props.slug}`}>{this.props.title}</Link>
+	<Link to={`/post/${this.props.slug}`}>{this.props.title}</Link>
 
-差别只有两个，`a` 标签变成了 `Link` ,属性 `href` 变成了 `to`。
+差别只有两个，`a` 标签变成了 `Link` ,属性 `href` 变成了 `to`。注意这个 render 里有两个 a 链接。
 
 最后，运行 `npm start`，哈利路亚！！！
 
