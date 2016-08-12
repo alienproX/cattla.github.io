@@ -4,7 +4,7 @@ title: 使用 React 和 Firebase 创建 Github 博客
 via: http://ghostffco.de/mini-github-pages-blog-using-react-firebase/
 ---
 
-把博客托管在 Github 的一般做法是使用 Github Page 自带的 <a href="http://jekyllrb.com" target="_blank">jekyllrb</a> 来生成页面，比如你现在看的这个网站。现在我要接受另一种方法，使用 React 和 Firebase。
+把博客托管在 Github 的一般做法是使用 Github Page 自带的 <a href="http://jekyllrb.com" target="_blank">jekyllrb</a> 来生成页面，比如你现在看的这个网站。现在我要介绍另一种方法，使用 React 和 Firebase。
 
 关于 React 就不多介绍了，已经有三年历史了，面子书出品，目前人气依旧旺盛。而 Firebase 是一个储存数据和管理 API 的工具网站（简单理解是这样），现在归于孤狗旗下了。看到这，应该明白这种博客形式的实现原理了吧.....
 
@@ -32,7 +32,7 @@ __第一步：__ 从 Firebase 开始
     ".read": true,
     ".write": false,
     "posts": {
-		".indexOn": ["id", "slug"]
+			".indexOn": ["id", "slug"]
     }
   }
 }
@@ -104,9 +104,9 @@ __第二步：__ 从 React 开始
 	├── favicon.ico
 	├── index.html
 	├── README.md
-	├── src
-	|	└── ...
-	└──
+	└── src
+		└── ...
+
 
 这个过程可能花费时间会长一点，因为依赖也安装好了。接着开始终端运行：
 
