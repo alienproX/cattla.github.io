@@ -89,7 +89,9 @@ __第二步：__ 从 React 开始
 
 1，安装 `create-react-app`，全局安装
 
-	npm install -g create-react-app
+{% highlight bash %}
+npm install -g create-react-app
+{% endhighlight %}
 
 2，然后终端进入某个目录，运行
 
