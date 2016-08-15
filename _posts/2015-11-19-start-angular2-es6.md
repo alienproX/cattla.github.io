@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Angular2 + ES6 项目起步
+category: notes
 ---
 
 想开始使用 Angular 2 ，又不知从何下手？到底和 Angular 1.X 有什么不同呢？

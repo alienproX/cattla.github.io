@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 七个升级到 Node.js V4.0 的理由
+category: notes
 ---
 
 距离 Node.js 4.0 版本的发布已经有一段时间了，这是 io.js 与 Node.js 合并后的第一个稳定版，上一个 Node 版本还是 `V0.12.7` 呢！新的版本使用了 ES6，下面就介绍一下几个升级的理由。

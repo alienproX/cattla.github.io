@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Branka与Bon Jovi的故事
+category: notes
 ---
 
 ![](https://i1.wp.com/www.billboard.com/files/styles/promo_650/public/field/image/jon-bon-jovi-branka-delic.jpg)

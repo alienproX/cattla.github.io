@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 在亚马逊 AWS 云服务 Amazon EC2 运行 Node.js
+category: notes
 ---
 
 由于 Amazon AWS云服务 EC2 有一年的免费服务，想试试云服务的朋友还是很可尝试的。云服务就不多介绍了，说人话一点就是，一台远程计算机。本文开始教导大家，如何在Amazon EC2 上运行Node.js。

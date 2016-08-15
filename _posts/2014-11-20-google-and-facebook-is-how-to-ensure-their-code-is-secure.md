@@ -2,6 +2,7 @@
 layout: default
 title: 像FB或者Google这样的公司，是如何保证他们的代码安全？
 via: http://www.quora.com/How-do-Google-and-Facebook-keep-their-source-codes-secure-when-hundreds-of-staff-members-have-access-to-it
+category: notes
 ---
 
 曾经在Facebook当过工程师。

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 在 Node JS 里把 XML 转换成 JSON 格式
+category: notes
 ---
 
 虽然现在使用XML格式的已经不多了，但是很多网站的API 还是会提供两种格式，XML 和 JSON。 那么在 Node JS 服务器这两种格式要怎么互相转换？

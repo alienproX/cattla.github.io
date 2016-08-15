@@ -2,6 +2,7 @@
 layout: default
 title: 使用 React 和 Firebase 创建 Github 博客
 via: http://ghostffco.de/mini-github-pages-blog-using-react-firebase/
+category: notes
 ---
 
 把博客托管在 Github 的一般做法是使用 Github Page 自带的 <a href="http://jekyllrb.com" target="_blank">jekyllrb</a> 来生成页面，比如你现在看的这个网站。现在我要介绍另一种方法，使用 React 和 Firebase。

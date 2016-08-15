@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 使用 Javascript 创建和保存文件
+category: notes
 ---
 
 Javascript 可以把 JSON 文本保存成一个文件，前提是你在点击下载的时候。本文会介绍到 Javascript 是怎么创建文件的，怎么把 JSON 文本保存到文件里。

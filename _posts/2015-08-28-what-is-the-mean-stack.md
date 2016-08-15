@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 关于前端开发 MEAN 组合框架的简介
+category: notes
 ---
 PHP 里的 LAMP（Linux ＋ Apache＋ MySql ＋ PHP）组合框架已经存在很长时间了，曾经风靡全球，当然了现在也很流行。目前还有另外一个组合框架也在慢慢变得流行，MEAN 。MEAN 指的是 `MongoDB`，`Express`，`AngularJS` 和 `Node.js` 的组合。这四项既包含前端也包含后端，运用这四项工具就可以开发出一个完整的网站或者 Web App，所用的语言全部都是 javascript。如果你对这四项不是全部熟悉，可以看看以下的介绍。
 
