@@ -1,0 +1,16 @@
+body {
+    background: #ffffff;
+}
+
+.notJquery .title {
+    background: #8c8c8c url(/files/notjQuery/bg.jpg?c) top center no-repeat;
+    height: 120px;
+    margin-top: 45px;
+    text-align: center;
+    font-size: 28px;
+    background-size: auto 200px;
+    color: #fff;
+    padding-top: 70px;
+    text-shadow: 0px 1px 1px #333;
+		letter-spacing: 2px;
+}
