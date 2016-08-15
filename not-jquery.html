@@ -1,0 +1,12 @@
+---
+layout: not-jquery
+title: 或许你不再需要使用 jQuery 了 -- mblur.com
+---
+<ul>
+    {% for post in site.categories.not-jquery %}
+        <li>
+            <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            <div><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+        </li>
+    {% endfor %}
+</ul>
