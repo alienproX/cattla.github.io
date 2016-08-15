@@ -1,0 +1,12 @@
+---
+layout: notes
+title: 全部文章 -- mblur.com
+---
+<ul>
+    {% for post in site.nojQuery %}
+        <li>
+            <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            <div><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+        </li>
+    {% endfor %}
+</ul>
