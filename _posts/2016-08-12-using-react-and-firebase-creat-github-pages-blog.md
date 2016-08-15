@@ -89,7 +89,7 @@ __第二步：__ 从 React 开始
 
 1，安装 `create-react-app`，全局安装
 
-{% highlight bash %}
+{% highlight haskell %}
 npm install -g create-react-app
 {% endhighlight %}
 
