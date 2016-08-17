@@ -2,6 +2,7 @@
 layout: default
 title: 不使用 jQuery 框架选择 HTML 元素
 category: not-jquery
+thumbnail_image: '/files/notjQuery/notjQuery.png'
 ---
 
 `$('#element')` 在 jQuery 代码中最常见的，估计你我都写了很多 :) 本章节主要讲一下在不使用 jQuery 的情况下，如何使用浏览器的 DOM API 来选择元素。选择方式主要有以下几种：
