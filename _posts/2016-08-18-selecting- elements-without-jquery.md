@@ -6,16 +6,6 @@ category: not-jquery
 
 `$('#element')` 在 jQuery 代码中最常见的，估计你我都写了很多 :) 本章节主要讲一下在不使用 jQuery 的情况下，如何使用浏览器的 DOM API 来选择元素。选择方式主要有以下几种：
 
-* 1，根据ID
-* 2，根据 CSS 类
-* 3，根据 HTML 标签
-* 4，属性
-* 5，根据伪类
-* 6，选择子节点
-* 7，选择所有子元素
-* 8，排除已选择元素
-* 9，选择多个不同的元素
-
 __根据 ID 选择元素__
 
 使用	jQuery 选择器
@@ -109,7 +99,7 @@ document.querySelectorAll('[data-foo="val"]');
 
 __根据伪类选择元素__
 
-比如现在有一个 ID 为 form 的表单，我们需要选择有效的输入框，如果使用 jQuery ：
+比如现在有一个 `id` 为 `form` 的表单，我们需要选择有效的输入框，如果使用 jQuery ：
 
 {% highlight javascript %}
 $('#form :invalid');
@@ -126,7 +116,7 @@ document.querySelectorAll('#form :invalid');
 
 __选择子元素__
 
-假设有一个 id 为 `parent` 的 div, 根据需要我们要选择它的子元素。子元素指的是第二级的节点元素，而不包含子元素的子元素。孙元素 :) 如果使用 jQuery 选择：
+假设有一个 id 为 `parent` 的 `div`, 根据需要我们要选择它的子元素。子元素指的是第二级的节点元素，而不包含子元素的子元素。孙元素 :) 如果使用 jQuery 选择：
 
 {% highlight javascript %}
 $('#parent').children();
