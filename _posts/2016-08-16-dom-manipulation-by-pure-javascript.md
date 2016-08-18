@@ -37,7 +37,7 @@ __在前/后插入元素__
 
 {% highlight html %}
 <div id="element1"></div>
-	<div id="element1_1"></div> //想插入的
+	<div id="element1_1"></div> <!--想插入的-->
 <div id="element2"></div>
 {% endhighlight %}
 
@@ -57,7 +57,7 @@ document.getElementById('#element1').insertAdjacentHTML('afterend', '<div id="el
 那如果我们想要的 DOM 结构是这样的：
 
 {% highlight html %}
-	<div id="element0_9"></div> //想插入的
+	<div id="element0_9"></div> <!--想插入的-->
 <div id="element1"></div>
 <div id="element2"></div>
 {% endhighlight %}
@@ -91,7 +91,7 @@ __作为子节点插入元素__
 
 {% highlight html %}
 <div id="parent">
-    <div id="newChild"></div> //插入的
+    <div id="newChild"></div> <!--想插入的-->
     <div id="oldChild"></div>
 </div>
 {% endhighlight %}
@@ -113,8 +113,8 @@ document.getElementById('parent').insertAdjacentHTML('afterbegin', '<div id="new
 
 {% highlight html %}
 <div id="parent">
-    <div id="oldChild"></div>
-    <div id="newChild"></div> //插入的
+  <div id="oldChild"></div>
+  <div id="newChild"></div> <!--想插入的-->
 </div>
 {% endhighlight %}
 
@@ -139,11 +139,11 @@ __移动元素__
 
 {% highlight html %}
 <div id="parent">
-    <div id="c1"></div>
-    <div id="c2"></div>
-    <div id="c3"></div>
+  <div id="c1"></div>
+  <div id="c2"></div>
+  <div id="c3"></div>
 </div>
-<div id="orphan"></div> //移动前
+<div id="orphan"></div> <!--移动前-->
 {% endhighlight %}
 
 那现在我们想把 `#orphan` 移到 `#parent` 里面，并排在最后，效果如下：
@@ -153,7 +153,7 @@ __移动元素__
     <div id="c1"></div>
     <div id="c2"></div>
     <div id="c3"></div>
-    <div id="orphan"></div> //移动后
+    <div id="orphan"></div> <!--移动后-->
 </div>
 {% endhighlight %}
 
@@ -174,7 +174,7 @@ document.getElementById('parent').appendChild(document.getElementById('orphan'))
 
 {% highlight html %}
 <div id="parent">
-		<div id="orphan"></div> //移动后
+		<div id="orphan"></div> <!--移动后-->
     <div id="c1"></div>
     <div id="c2"></div>
     <div id="c3"></div>
