@@ -234,9 +234,9 @@ keydown 事件发生在键盘的键被按下的时候，接下来触发 keypress
 >keydown 和 keyup 对于单个字符捕获的 KeyValue 都是一个值，也就是不能判断单个字符的大小写。
 >
 >keypress 不区分小键盘和主键盘的数字字符。
-
+>
 >keydown 和 keyup 区分小键盘和主键盘的数字字符。
-
+>
 >其中 PrScrn 按键 keypress, keydown 和 keyup 都不能捕获。
 
 假设说，我们开发的 Web 应用里，需要附带有键盘操作功能，比如按下 `Ctrl + H` 组合键，即可弹出帮助框，用 jQuery 实现如下：
@@ -271,9 +271,11 @@ __浏览器加载事件__
 
 如果是判断全部加载完成，使用 jQuery 方式：
 
+{% highlight javascript %}
 $(window).load(function() {
     // 全部加载并且页面渲染完成
 })
+{% endhighlight %}
 
 如使用 Web API，如下：
 
