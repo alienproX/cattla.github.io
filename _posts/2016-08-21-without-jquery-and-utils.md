@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 抛弃 jQuery
+title: 抛弃 jQuery 之后的其它补充
 category: not-jquery
 ---
 
-这是[本系列](https://mblur.com/not-jquery.html)的最后一篇文章了，之前讲的选择元素，DOM 操作，Ajax 处理，事件处理已涵盖了大部分，但是 jQuery 并非如此简单，它还内置了很多其它方法。同样本篇文章讲的还是要基于高级浏览器（IE 9+），可以视作 HTML5 环境吧。
+这是[本系列](https://mblur.com/not-jquery.html)的最后一篇文章了，之前讲的选择元素，DOM 操作，Ajax 处理，事件处理已涵盖了大部分，但是 jQuery 并非如此简单，它还内置了很多其它方法。同样本篇文章讲的大多还是要基于高级浏览器（IE 9+），可以视作 HTML5 环境吧。
 
 ### 判断是否是对象，数组，函数
 
@@ -66,7 +66,6 @@ var o1 = {
             b1: 'b1'
         }
     },
-
     o2 = {
         b: {
             b2: 'b2'
@@ -187,7 +186,7 @@ for (var prop in myObject) {
 
 {% highlight javascript %}
 Object.keys(myObject).forEach(function(prop) {
-    逻辑处理，只有 c 和 d 会进入到这
+    // 逻辑处理，只有 c 和 d 会进入到这
 });
 {% endhighlight %}
 
@@ -576,7 +575,6 @@ var data = window.WeakMap ? new WeakMap() : (function() {
             }
             store[id] = info;
         },
-
         get: function(element) {
             return store[element.myCustomDataTag];
         }

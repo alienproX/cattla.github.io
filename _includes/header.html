@@ -9,7 +9,11 @@
     </head>
     <body>
         <div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
-            <img src="/stylesheets/icon.png" width='640'>
+            {% if page.thumbnail_image %}
+            <img src = "{{page.thumbnail_image}}" width = '640' >
+            {% else %}
+            <img src="/stylesheets/icon.png" width="640">
+            {% endif %}
         </div>
         <header>
             <div class="navWrap">
