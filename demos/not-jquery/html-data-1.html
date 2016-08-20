@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>MBlur</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <body>
+        <div id="one">one</div>
+        <div id="two">two</div>
+    </body>
+
+    <script>
+        $('#one').data('partnerElement', $('#two'));
+        $('#two').data('partnerElement', $('#one'));
+
+        $('#one, #two').click(function() {
+            $(this).data('partnerElement').toggle();
+        });
+    </script>
+</html>

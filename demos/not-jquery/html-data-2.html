@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>MBlur</title>
+    </head>
+    <body>
+        <div id="one">one</div>
+        <div id="two">two</div>
+    </body>
+
+    <script>
+        var data = (function() {
+            var lastId = 0,
+                store = {};
+
+            return {
+                set: function(element, info) {
+                    var id;
+                    if (element.myCustomDataTag === undefined) {
+                        id = lastId++;
+                        element.myCustomDataTag = id;
+                    }
+                    store[id] = info;
+                },
+
+                get: function(element) {
+                    return store[element.myCustomDataTag];
+                }
+            };
+        }());
+
+        var one = document.getElementById('one'),
+            two = document.getElementById('two'),
+            toggle = function(element) {
+                if (element.style.display !== 'none') {
+                    element.style.display = 'none';
+                } else {
+                    element.style.display = 'block';
+                }
+            };
+
+        data.set(one, {partnerElement: two});
+        data.set(two, {partnerElement: one});
+
+        one.addEventListener('click', function() {
+            toggle(data.get(one).partnerElement);
+        });
+        two.addEventListener('click', function() {
+            toggle(data.get(two).partnerElement);
+        });
+    </script>
+</html>
