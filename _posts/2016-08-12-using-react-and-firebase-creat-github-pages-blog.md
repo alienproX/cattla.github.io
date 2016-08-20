@@ -11,7 +11,7 @@ category: notes
 
 废话不多说，Let's Rock N' Roll...
 
-__第一步：__ 从 Firebase 开始
+### 第一步：从 Firebase 开始
 
 使用 Google 账号登录 <a href="https://firebase.google.com/" target="_blank">Firebase</a>，然后创建项目。
 
@@ -84,7 +84,7 @@ __第一步：__ 从 Firebase 开始
 到此，在Firebase 的操作部分，暂告一段落，接着我们得整点前端的事儿。
 
 
-__第二步：__ 从 React 开始
+### 第二步：从 React 开始
 
 上个月，面子书推出了一个 React 项目基础设施速成工具，<a href="https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html" target="_blank">Create React App</a>  。 这个工具可以让你快速创建一个 React 项目，而无需担心要如何去设置 webpack，loaders，babel…..要如何配置，当然如何你对这几项工具十分熟悉，完全可以自己 DIY，毕竟这才最合你意。下面介绍的使用速成工具。
 
@@ -120,7 +120,7 @@ npm install -g create-react-app
 
 ![](/files/2015001/5.png)
 
-__第三步：__ 设计
+### 第三步：设计
 
 这一步我们要做的事情，是改变 `blog` 目录里的 `index.html` 和 `index.css`。
 
@@ -232,7 +232,7 @@ a:hover {
 
 好，设计完成！
 
-__第四步：__ 添加配置
+### 第四步：添加配置
 
 现在虽然 React 可以运行了，但还是一个静态页面，于是，我们必须创建组件（component）和添加配置文件，为了和 Firebase 连接，我们先在 `src` 目录创建一个 `config.js` 文件，如下：
 
@@ -247,7 +247,7 @@ export default {
 
 注意替换成你刚创建的 Firebase 项目里的参数。至于 `blog` 文件夹里的其它没用到的文件，比如 `App.css`，`logo.svg` ... 可以移除掉。
 
-__第五步：__ 添加主组件 App.js
+### 第五步：添加主组件 App.js
 
 安装 firebase 模块
 
@@ -295,7 +295,7 @@ export default App;
 
 在 `componentDidMount()` 这个函数里，我们通过 `id` 这个参数和 `data.val()` 这个方法来获取 Firebase 的数据，会返回一个数组，数据获取成功之后，更新 React 的 state , 然后使用数组的 `.reverse()` 方法颠倒数组，以致让最后发表的文章（在数组最后），可以显示在最前面。
 
-__第六步：__ 文章列表组件 Posts.js
+### 第六步：文章列表组件 Posts.js
 
 从上面的 `App.js` 可以看出，`render()` 部分只有一个空的 `div`，这显然不够。于是我们还要创建其它组件，先在 `src` 目录创建一个名为 `Components` 的文件夹，然后进入并添加文件 `Posts.js`，这个 `Posts` 组件会从上面的 `App` 组件的 state 获取值，然后把这个值变成自己的属性（props），最后渲染出来。完整代码如下：
 
@@ -320,7 +320,7 @@ export default class Posts extends Component {
 }
 {% endhighlight %}
 
-__第七步：__ 连接主组件和文章列表组件
+### 第七步：连接主组件和文章列表组件
 
 上面说了 `Posts` 组件要从 `App` 组件获取值，就必需要把这两个组件连接起来。
 
@@ -356,7 +356,7 @@ render() {
 
 这时候，在终端运行 `npm start` ，项目是跑不起来的，甚至报错，还没完成嘛！
 
-__第八步：__ 添加文章详情组件 Post.js
+### 第八步：添加文章详情组件 Post.js
 
 在 `Components` 文件夹，添加文件 `Post.js `，先在该文件添加一下依赖，代码如下：
 
@@ -411,7 +411,7 @@ componentDidMount() {
 }
 {% endhighlight %}
 
-__第九步：__ 添加路由
+### 第九步：添加路由
 
 在这我们使用 `react-routes`，先用 npm 安装：
 
@@ -438,7 +438,7 @@ ReactDOM.render(
 
 貌似完成得差不多了，但还差一点点，需要再调整一下。
 
-__第十步：__ 链接调整
+### 第十步：链接调整
 
 使用 `react-router` 路由，要在常规的 HTML `a` 标签做个小调整。进入文件夹 src/Components/  打开 `Posts.js` 文件，先把 `react-router` 的 `Link` import 进去。
 

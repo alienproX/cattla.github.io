@@ -5,7 +5,7 @@ category: not-jquery
 ---
 在 [上一篇文章](https://mblur.com/not-jquery/2016/08/16/dom-manipulation-by-pure-javascript.html) 中，讲到如何使用原生 JavaScript 进行 DOM 操作。 除了 DOM 操作，jQuery 还封装了一个优秀功能，Ajax 请求操作。现在的大多项目中，几乎所有的数据全部基于 Ajax 请求实现，实行前后端分离了嘛，不再像之前 HTML 与动态语言（PHP，Java...）混在一起。那么到后来，Ajax 也有很多高级一点的进化，比如使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API" target="_blank">fetch API</a>，<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise对象</a>。这暂不在本文范畴内，本文讲原始一点的 `XMLHttpRequest` 请求，包括跨域之类的，因为兼容性强嘛。
 
-__GET 请求__
+### GET 请求
 
 最简单最常见的请求，比如我们需要用向服务器请求用户名，唯一的参数是 ID，ID 不重复，那 URL 即是 `myservice/username?id=some-unique-id` 如果请求错误或者失败需要有报错或错误提示。
 
@@ -45,7 +45,7 @@ xhr.send();
 
 上述的原生方法，只能在 IE 7+ 上运行，如果是 IE 6 则需要把 `new XMLHttpRequest()` 替换成 `new ActiveXObject("MSXML2.XMLHTTP.3.0")`。使用原生方法，虽然看起来不够复杂，但是在直观上美观上难免差强人意，毕竟没经过包装嘛！
 
-__POST 请求__
+### POST 请求
 
 POST 也是很常见的请求方式，至于和 GET 有和差别，在此不表，也不是三两句可以说得完的。把上述 GET 的场景升级一下，还是原来的接口，还是一个参数 ID，但是这次我们不是要取得用户名，而是修改用户名，这意味着需要多一个参数 name ，把参数放在请求报文内，并且 URL 参数需要先进行 URL 编码，服务器会返回是否更新。为什么要进行编码，因为在某些浏览器，可能会报错。
 
@@ -93,7 +93,7 @@ xhr.send(encodeURI('name=' + newName));
 
 再看一下，还是感觉 jQuery 的方法会更优雅一些。但考虑到需要引入整个 jQuery 文件，那么如果是几个简单的请求，显然是不需要引入 jQuery 的，或者自己封装一下 `XMLHttpRequest` ，也会看起来很优雅！
 
-__URL 编码__
+### URL 编码
 
 jQuery 内置了一个方法，`$.param()` 可以把一个对象编码成符合 URL 规范的参数，比如：
 
@@ -138,7 +138,7 @@ function param(object) {
 }
 {% endhighlight %}
 
-__发送和接收 JSON__
+### 发送和接收 JSON
 
 JSON 数据格式，已经是前后端通讯 API 的标配了，通常也是请求的参数和返回的值都是 JSON 格式，比如我们要更新服务器数据库某个表的值，更新成功后，会把最新的值返回回来，在此我们使用 PUT 请求，jQuery 方式：
 
@@ -178,7 +178,7 @@ xhr.send(JSON.stringify({
 
 上面的原生方式只能在 IE 8+ 上起作用，因为更低级的浏览器是不支持原生 JSON 对象的。修复方案是是引入 <a href="https://github.com/douglascrockford/JSON-js" target="_blank">json.js</a>。如果是使用 POST 请求，修改 method 即可。
 
-__上传文件__
+### 上传文件
 
 在包括 IE 9 在内及以下的浏览器，上传文件需要具备两个条件，`<form>` 标签和标签内的字段 `<input type="file">` ，这两个是必须的。但是高级浏览器是可以通过 File API 上传文件，也就是说用 Ajax 的方式上传。
 
@@ -244,7 +244,7 @@ xhr.send(file);
 
 在这点上，原生的比 jQuery 看起来会更加好看一点。
 
-__CORS 跨域__
+### CORS 跨域
 
 CORS 意思是 Cross Origin Resource Sharing，字面理解是，跨资源共享，即发送跨域Ajax请求。这也是相当复杂的话题，网上各种文章，各种分析也很多了。如果不清楚 CORS 和同源策略，请参考这个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank">HTTP访问控制(CORS)</a> 。
 
@@ -289,7 +289,7 @@ if (new XMLHttpRequest().withCredentials === undefined) {
 
 要注意一点，在使用 `XDomainRequest` 是没办法设置任何请求报头的。
 
-__JSONP 请求__
+### JSONP 请求
 
 不大建议使用 JSONP ，涉及到安全问题，如果你的项目属于 HTML 5，强烈建议使用 CORS。如果你不了解，先来理解一下什么是 JSONP，不要被它的名字所欺骗，它跟 JSON 没有任何关系，甚至跟 `XMLHttpRequest` 都没有关系。因为它返回的是一串像调用函数一样的文本，然后 把它当作 JavaScript 脚本来执行，以达到跨域的目的。简单思路如下：
 
@@ -333,7 +333,7 @@ jsonp('http://jsonp-aware-endpoint.com/user?id=1',function(data){
 {% endhighlight %}
 
 
-__扩展阅读__
+### 扩展阅读
 
 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API" target="_blank">Fetch API</a>，相比于 XMLHttpRequest 更强大更灵活。
 

@@ -7,7 +7,7 @@ thumbnail_image: '/files/notjQuery/notjQuery.png'
 
 `$('#element')` 在 jQuery 代码中最常见的，估计你我都写了很多 :) 本章节主要讲一下在不使用 jQuery 的情况下，如何使用浏览器的 DOM API 来选择元素。选择方式主要有以下几种：
 
-__根据 ID 选择元素__
+### 根据 ID 选择元素
 
 使用	jQuery 选择器
 
@@ -32,7 +32,7 @@ document.querySelector('#element');
 
 这些方法都只会返回一个元素，而且  `getElementById()` 比 `querySelector()` 更高效。以上的选择方式，jQuery 看起来更有优势吗？我并不觉得。
 
-__根据 CSS 类选择元素__
+### 根据 CSS 类选择元素
 
 使用	jQuery 选择器
 
@@ -57,7 +57,7 @@ document.querySelector('.element');
 
 `getElementsByClassName()` 返回的是 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCollection" target="_blank">HTML 集合</a> ，相比起来，会比 `querySelector()` 更加的高效，而 `querySelector()` 返回的是一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList" target="_blank">节点集合</a>。同样的比起来，jQuery 选择器也体现不出什么优势。
 
-__根据标签选择元素__
+### 根据标签选择元素
 
 使用	jQuery 选择器
 
@@ -81,7 +81,7 @@ document.querySelectorAll('div');
 
 如同上面说的一样，`querySelectorAll()`(返回节点集合) 没有比 `getElementsByTagName()`(返回 HTML 集合)高效。
 
-__根据属性选择元素__
+### 根据属性选择元素
 
 如果需要选择属性 `data-foo = "val"` 的所有元素，使用 jQuery：
 
@@ -98,7 +98,7 @@ document.querySelectorAll('[data-foo="val"]');
 
 这两个选择方法倒是看起来挺像的。
 
-__根据伪类选择元素__
+### 根据伪类选择元素
 
 比如现在有一个 `id` 为 `form` 的表单，我们需要选择有效的输入框，如果使用 jQuery ：
 
@@ -115,7 +115,7 @@ document.querySelectorAll('#form :invalid');
 
 这一点如果用原生的对浏览器要求有点高，但是如果是开发 HTML5 应用就可以忽略这一点了。
 
-__选择子元素__
+### 选择子元素
 
 假设有一个 id 为 `parent` 的 `div`, 根据需要我们要选择它的子元素。子元素指的是第二级的节点元素，而不包含子元素的子元素。孙元素 :) 如果使用 jQuery 选择：
 
@@ -158,7 +158,7 @@ document.querySelector('#parent > [ng-click]');
 //IE 8+
 {% endhighlight %}
 
-__排除选择元素__
+### 排除选择元素
 
 比如需要选择所有 CSS 类不含 `ignore` 的 `div` 元素，使用 jQuery 选择：
 
@@ -179,7 +179,7 @@ document.querySelectorAll('div:not(.ignore)');
 //IE 9+
 {% endhighlight %}
 
-__选择多个不同的元素__
+### 选择多个不同的元素
 
 使用 jQuery 选择：
 
@@ -195,7 +195,7 @@ document.querySelectorAll('div, a, script');
 //IE 8+
 {% endhighlight %}
 
-__封装一个选择器__
+### 封装一个选择器
 
 如果说，项目里需要使用选择器的地方多，而不又不考虑低于 IE8 的低级浏览器，那么合理的做法是自己写一个选择器函数，参如下：
 

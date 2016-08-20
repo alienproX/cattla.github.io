@@ -5,7 +5,7 @@ category: not-jquery
 ---
 在 [上一篇文章](https://mblur.com/not-jquery/2016/08/14/selecting-elements-without-jquery.html) 中，讲到如何使用浏览器的原生选择器。那么选完元素之后呢，当然是要操作！论操作方式，jQuery 有 `after()`，`append()`，`prepend()`，`before()` 等等这些方法，虽然原生的 API 没有提供这些方法，但是这些方法都是基于原生实现的，所以下面将介绍使用原生的 JavaScript 操作 DOM 的几个主要方法。
 
-__创建新元素__
+### 创建新元素
 
 使用 jQuery 的方式：
 
@@ -22,7 +22,7 @@ document.createElement('div');
 
 差别不大，倒是 jQuery 的方式可以节约一点字符。
 
-__在前/后插入元素__
+### 在前/后插入元素
 
 有一个 `id` 为 `element1` 的元素，我们要在其后插入一个新的元素。
 
@@ -77,7 +77,7 @@ document.getElementById('#element1').insertAdjacentHTML('beforebegin', '<div id=
 
 前后插入的方式就几个关键的差别，jQuery 的 `before()` 和 `after()`，而原生的 `insertAdjacentHTML()` 方法是，第一个参数不同，`afterend` 和 `beforebegin`，注意这两个参数是字符串。
 
-__作为子节点插入元素__
+### 作为子节点插入元素
 
 原本的 DOM 结构为：
 
@@ -133,7 +133,7 @@ document.getElementById('parent').insertAdjacentHTML('beforeend', '<div id="newC
 
 和上面的前后插入差不多，jQuery 的方法是 `prepend()` 和 `append()`，而原生的差别也是在第一个参数，`afterbegin` 和 `beforeend`。并且兼容性特别强，IE 4+ ....
 
-__移动元素__
+### 移动元素
 
 比如原本的 DOM 结构是这样的：
 
@@ -196,7 +196,7 @@ document.getElementById('parent').insertBefore(document.getElementById('orphan')
 
 虽然使用原生的看起来有点长，重点在于 `insertBefore()`，但是同样可以一行完成，而且不用引入一个庞大的库呀！
 
-__删除元素__
+### 删除元素
 
 如何在一个 DOM 结构里把某个元素删除掉？ 大家熟悉的 jQuery 方式：
 
@@ -213,7 +213,7 @@ document.getElementById('element').parentNode.removeChild(document.getElementByI
 
 在此，不得不说原生的方法确实有点丑陋，实现方式是先用属性 `parentNode` 找到父节点，然后在用 `removeChild()` 把自己删除掉，略感曲折悲壮！
 
-__添加/删除 CSS 类样式 __
+### 添加/删除 CSS 类样式
 
 我们有一个 `id` 为 `element` 的 `div` :
 
@@ -263,7 +263,7 @@ document.getElementById('foo').className = document.getElementById('foo').classN
 
 如果使用原生的方式，在高级浏览器是没啥问题，但是如果需要兼容低级浏览器，那么可能实现起来有点麻烦，而且挺丑陋的。
 
-__添加/删除/修改属性__
+### 添加/删除/修改属性
 
 还是原来那个 div。
 
@@ -303,7 +303,7 @@ document.getElementById('element').removeAttribute('role');
 
 关于原生的，重点在于 `setAttribute()` 和 `removeAttribute()` 这两个方法。
 
-__添加/修改元素内的文本内容__
+### 添加/修改元素内的文本内容
 
 我们现在有一个元素，如下：
 
@@ -343,7 +343,7 @@ document.getElementById('element').innerHTML;
 
 在此要注意 `innerHTML` 和 `innerText` 的区别，使用 `innerHTML` 赋入的文本是会被转义成 HTML 的，如果文本内容是由用户提供，请谨慎使用 `innerHTML`，防止被注入 srcipt 脚本。
 
-__添加/修改 style 样式__
+### 添加/修改 style 样式
 
 为元素修改样式是一个常见的需求，可以使用添加/删除 CSS 类这个方式，但是略麻烦，更简单是直接修改其 style 属性。以下是一个简单的元素：
 
@@ -370,6 +370,6 @@ document.getElementById('note').style.fontWeight = 'bold';
 
 我觉得原生的方式会更好一点，虽然看起来长了一点，但是直观。
 
-__相关的其它库__
+### 相关的其它库
 
 上面说了那么多，用你心中的那杆称，也许知道自己该怎么选择了。通常为了项目的快速开发，会选择一个库，省时省力。但缺点是，门槛太低了，如果是多人协作的项目，估计很有可能会大大降低代码的质量与美感。如果你需要繁琐地操作 DOM ，而又不想使用 jQuery ，可以考虑使用 <a href="http://jbone.js.org/" target="_blank">jbone</a>，Backbone 御用（之前用的是 jQuery），gzip 之后，只有 2.5K 大小。

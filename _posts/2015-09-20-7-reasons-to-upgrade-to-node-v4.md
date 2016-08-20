@@ -6,7 +6,7 @@ category: notes
 
 距离 Node.js 4.0 版本的发布已经有一段时间了，这是 io.js 与 Node.js 合并后的第一个稳定版，上一个 Node 版本还是 `V0.12.7` 呢！新的版本使用了 ES6，下面就介绍一下几个升级的理由。
 
-__1，__ 模板字符串（Template Strings）
+### 1，模板字符串（Template Strings）
 
 至于什么是模板字符串，请移步到这里 ，简单理解就是可以在字符串里包含语法。在之前的 Javascript 里，如果你想创建一个多行文本的字符串，也许你会使用下列方法：
 
@@ -40,7 +40,7 @@ var message = require('util').format('Hello %s, how is your cat?', name);
 
 怎么样？很任性吧！！！
 
-__2，__  类（Classes）
+### 2，类（Classes）
 
 在之前的 Javascript 里，严格上说，是没有“类”这一概念的，因为它不能像 PHP 一样直接通过 Class 定义，而实现方法只能通过构造函数和原型，像下面：
 
@@ -100,7 +100,7 @@ class Cat extends Pet {
 
 如果你懂得 PHP 或者其它有 Class 的语言，那么就会很熟悉这种写法了。如想了解更多关于 ES6 的 Class 请移步：这里。
 
-__3，__  箭头函数（Arrow Functions）
+### 3，箭头函数（Arrow Functions）
 
 如果对 Javascript 掌握不是很好的朋友，也许会觉得 JS 里的 this 到底是指向哪里，很没把握，而且容易引起混乱。而箭头函数的概念，首先它是一个匿名函数，是简写的函数表达式，重要一点是它可以指定 this 值。语法如下：
 
@@ -152,7 +152,7 @@ Cat.prototype.notifyListeners = function () {
 };
 {% endhighlight %}
 
-__4，__ 对象字面量（Object Literals）
+### 4，对象字面量（Object Literals）
 
 传统方式：
 
@@ -177,7 +177,7 @@ var cat = {
 
 两者输出的对象 cat 是一样的。
 
-__5,__ Promises 形式
+### 5，Promises 形式
 
 Javascript 中 Promises 这个词在中文里不能翻译成 “承若”，而应该是普罗米修斯，意指有先见之明的意思。在 ES6 中已经有提供原生方法了，而不需要去模拟。
 
@@ -192,7 +192,7 @@ var p5 = Promise.race(p1, p2);
 p1.then(() => {}).catch(() => {});
 {% endhighlight %}
 
-__6，__ 字符串新方法
+### 6，字符串新方法
 
 {% highlight javascript %}
 // replace `indexOf()` in a number of cases
@@ -205,7 +205,7 @@ name.repeat(3);
 {% endhighlight %}
 
 
-__7，__ let 和 const
+### 7，let 和 const
 
 先看下面这段代码：
 

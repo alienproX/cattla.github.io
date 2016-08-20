@@ -5,7 +5,7 @@ category: notes
 ---
 PHP 里的 LAMP（Linux ＋ Apache＋ MySql ＋ PHP）组合框架已经存在很长时间了，曾经风靡全球，当然了现在也很流行。目前还有另外一个组合框架也在慢慢变得流行，MEAN 。MEAN 指的是 `MongoDB`，`Express`，`AngularJS` 和 `Node.js` 的组合。这四项既包含前端也包含后端，运用这四项工具就可以开发出一个完整的网站或者 Web App，所用的语言全部都是 javascript。如果你对这四项不是全部熟悉，可以看看以下的介绍。
 
-__MEAN 名词解释__
+### MEAN 名词解释
 
 __M__ 代表的是 `MongoDB`，世上 NoSQL 数据库的领航者，要注意一点，NoSQL 不是没有 SQL，而是 Not Only SQL，俗称非关系形数据库。MongoDB 是一个介于关系数据库和非关系数据库之间的产品。他支持的数据结构非常松散，是类似 json 的 bson 格式，因此可以存储比较复杂的数据类型。Mongo最大的特点是他支持的查询语言非常强大，其语法有点类似于面向对象的查询语言，几乎可以实现类似关系数据库单表查询的绝大部分功能，而且还支持对数据建立索引。
 
@@ -19,7 +19,7 @@ __N__ 代表的是 Node.js，运行在服务端，使用的是 Google 的 V8 引
 
 以下运行环境均指在 Linux 或者 Mac 平台。
 
-__第一个 Express 服务__
+### 第一个 Express 服务
 
 第一步：建立一个文件夹，然后进入并运行：
 
@@ -66,7 +66,7 @@ app.listen(3000, function() {
 
 保存之后，然后在命令行运行 npm start，通过 http://localhost:3000 就可以看到以上代码输出的 Hello from Express 。除了用 `npm start`，还可以使用 `node server` ，`node server.js`， `node ./server` 来启动该服务。
 
-__使用 MongoDB 数据库__
+### 使用 MongoDB 数据库
 
 开始之前首先确保安装了 `MongoDB`，具体可以访问其官网 http://mongodb.org 。要在 Express 和 MongoDB 之间建立连接，必须安装个依赖，相关的依赖有很多，比如 mongodb，monk，mongoose。在此我们用 `monk` 做示范，开始执行以下命令：
 
@@ -157,7 +157,7 @@ app.listen(3000, function() {
 
 运行 `node server` 后可以浏览 http://localhost:3000/character ，就可以看到输出的一个 JSON 字符串。上面是使用 find() 这个函数来查询 swChars，第一个参数是查询规则（上面为空），是一个 javascript 对象，第二个参数是一个回调函数，查询完成后调用。
 
-__在前端布置 AngularJS__
+### 在前端布置 AngularJS
 
 通过上面的后端三个组合，运行起来，其实已经是个简单的 API 了。单有接口还不够，必须将数据 “可视化” ，于是我们使用 AngularJS。
 
