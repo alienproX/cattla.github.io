@@ -36,4 +36,4 @@ React 已经问世一段长时间了，现在也是几个热门框架之一，�
 
 比如一个函数里，执行下来，一次性要修改 30个节点，这意味着要进行 30次的回流与 30 次的重绘。如果是经过虚拟 DOM 的话（虚拟 DOM  存在于 JavaScript 内存中），虚拟 DOM 会先在内存中进行这 30次修改的计算，得出最终结果，然后在真正去操作 DOM，也就是可以把回流与重绘降低到了一次。
 
-如果没有使用虚拟 DOM，自己也可以优化这一点，使用<a href=“https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createDocumentFragment” target=“_blank”>DOM fragment</a> 先进行操作。
+如果没有使用虚拟 DOM，自己也可以优化这一点，使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createDocumentFragment" target="_blank">DOM fragment</a> 先进行操作。
