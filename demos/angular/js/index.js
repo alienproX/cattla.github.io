@@ -34,7 +34,7 @@ App.config(['$routeProvider', '$controllerProvider', '$compileProvider', '$filte
 
   $routeProvider
     .when('/demo', {
-      templateUrl: 'views/demo/index.html',
+      templateUrl: 'demos/angular/views/demo/index.html',
       controller: 'DemoController',
       resolve: {
         load: ['$q', '$timeout', ($q, $timeout) => {
@@ -49,7 +49,7 @@ App.config(['$routeProvider', '$controllerProvider', '$compileProvider', '$filte
       }
     })
     .when('/', {
-      templateUrl: 'views/home/index.html',
+      templateUrl: 'demos/angular/views/home/index.html',
       controller: 'HomeController',
       resolve: {
         load: ['$q', '$timeout', ($q, $timeout) => {
