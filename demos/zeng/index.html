@@ -4,21 +4,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style type="text/css">
+    div {
+      width: 400px;
+      margin: 100px auto 0px;
+      font-family: arial;
+    }
+
+    input {
+      border: 1px solid #ccc;
+      width: 300px;
+      font-size: 18px;
+      padding: 5px;
+      border-radius: 2px;
+      vertical-align: text-bottom;
+    }
+
+    button {
+      border: 1px solid #4CAF50;
+      display: inline-block;
+      height: 32px;
+      vertical-align: text-bottom;
+      font-size: 14px;
+      border-radius: 2px;
+      margin-left: 5px;
+      width: 60px;
+      background: #4CAF50;
+      color: #fff;
+    }
+
+    a {
+      display: block;
+      font-size: 14px;
+      margin-top: 40px;
+      color: #2196F3;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
   <div>
-    <input type="text" id="testText" value ='test'>
+    <input type="text" id="testText" value='test'>
     <button id="post">POST</button>
 
-    <a href="/demos/zeng/newtab.html" target="_blank">Open a new Tab to show the input value</a>
+    <a href="/demos/zeng/newtab.html" target="_blank">Open a new Tab to show the input value after press `POST`</a>
   </div>
 
 </body>
 <script type="text/javascript" src="/demos/zeng/zeng.js"></script>
 <script>
-document.querySelector('#post').addEventListener('click', function() {
+  document.querySelector('#post').addEventListener('click', function() {
     zeng.emit('TEST', document.querySelector('#testText').value)
-})
+  })
 </script>
+
 </html>

@@ -4,18 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style type="text/css">
+    span {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      width: 400px;
+      margin: 100px auto 0px;
+      font-family: arial;
+      padding: 20px;
+      border: 1px dotted #8BC34A;
+      border-radius: 4px;
+      color: #666;
+    }
+  </style>
 </head>
 
 <body>
   <div>
-    <span id="testText"></span>
+    <span id="testText">test</span>
   </div>
 
 </body>
 <script type="text/javascript" src="/demos/zeng/zeng.js"></script>
 <script>
-zeng.on('TEST', function(val) {
-  document.querySelector('#testText').innerHTML = val
-})
+  zeng.on('TEST', function(val) {
+    document.querySelector('#testText').innerHTML = val
+  })
 </script>
+
 </html>
