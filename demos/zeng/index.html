@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <div>
+    <input type="text" id="testText" value ='test'>
+    <button id="post">POST</button>
+
+    <a href="/demos/newtab.html" target="_blank">Open a new Tab to show the input value</a>
+  </div>
+
+</body>
+<script type="text/javascript" src="/demos/zeng/zeng.js"></script>
+<script>
+document.querySelector('#post').addEventListener('click', function() {
+    zeng.emit('TEST', document.querySelector('#testText').value)
+})
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <div>
+    <span id="testText"></span>
+  </div>
+
+</body>
+<script type="text/javascript" src="/demos/zeng/zeng.js"></script>
+<script>
+zeng.on('TEST', function(val) {
+  document.querySelector('#testText').innerHTML = val
+})
+</script>
+</html>
