@@ -1,0 +1,16 @@
+{% include header.html %}
+<link type="text/css" rel="stylesheet" href="/stylesheets/swiftui.css"/>
+<div class="swiftUI">
+    <div class="title">
+        <h1>SwiftUI 快速入门教程</h1>
+    </div>
+    <div class="textContent">
+      <article>
+        <p>很多前端开发人员学习 JavaScript 是从 jQuery 开始的。因为它可以实现的功能很多，而且使用方便，对于很多初级开发者来说， jQuery 就是 JavaScript ，其实它只是一个库（不是框架）。那你为什么要用它？为何不尝试停止使用？<a href="javascript:void(0)" onclick="moreOrLess()" class="moreLink">详情</a>
+        </p>
+      </article>
+      <h3>文章列表</h3>
+        {{ content }}
+    </div>
+</div>
+{% include footer.html %}
