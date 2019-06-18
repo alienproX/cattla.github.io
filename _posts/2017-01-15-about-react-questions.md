@@ -7,7 +7,7 @@ via: https://tylermcginnis.com/react-interview-questions/
 
 ### 调用 setState 的时候内部发生了什么？
 
-第一件事就是 React 会先把传入的对象和组件当前的对象先合并（merge）。由于状态的改变，极有可能需要更新视图，所以在 React 内部会创建一棵新的 React 元素树（当前状态所对应的元素），然后为了区分新的状态传进来之后，有哪些视图需要更新，React 会将这棵元素树跟上一次的做比较，这样一来，React 就知道哪些需要变化了，于是可以用最小的改动进行视图更新。其实这就是虚拟 DOM 的原理，更详细的可以看我之前的一篇文章《<a href="https://mblur.com/notes/2016/08/28/react-why-virtual-dom.html" target="_blank">React 为什么要使用虚拟 DOM，什么是虚拟 DOM ？</a>》。
+第一件事就是 React 会先把传入的对象和组件当前的对象先合并（merge）。由于状态的改变，极有可能需要更新视图，所以在 React 内部会创建一棵新的 React 元素树（当前状态所对应的元素），然后为了区分新的状态传进来之后，有哪些视图需要更新，React 会将这棵元素树跟上一次的做比较，这样一来，React 就知道哪些需要变化了，于是可以用最小的改动进行视图更新。其实这就是虚拟 DOM 的原理，更详细的可以看我之前的一篇文章《<a href="https://appblur.com/notes/2016/08/28/react-why-virtual-dom.html" target="_blank">React 为什么要使用虚拟 DOM，什么是虚拟 DOM ？</a>》。
 
 ### 该如何选择类组件（Class Component）和函数式组件（Functional Component）？
 

@@ -1,9 +1,10 @@
 ---
-layout: notes
-title: 全部文章 -- appblur.com
+layout: not-jquery
+title: 或许你不再需要使用 jQuery 了
+thumbnail_image: '/files/notjQuery/notjQuery.png'
 ---
-<ul>
-    {% for post in site.categories.notes %}
+<ul class="postList">
+    {% for post in site.categories.swiftui reversed %}
         <li>
             <span>{{ post.date | date: "%Y-%m-%d" }}</span>
             <div><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>

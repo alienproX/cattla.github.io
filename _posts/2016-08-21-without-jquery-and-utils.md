@@ -4,7 +4,7 @@ title: 抛弃 jQuery 之后的其它补充
 category: not-jquery
 ---
 
-这是[本系列](https://mblur.com/not-jquery.html)的最后一篇文章了，之前讲的选择元素，DOM 操作，Ajax 处理，事件处理已涵盖了大部分，但是 jQuery 并非如此简单，它还内置了很多其它方法。同样本篇文章讲的大多还是要基于高级浏览器（IE 9+），可以视作 HTML5 环境吧。
+这是[本系列](https://appblur.com/not-jquery.html)的最后一篇文章了，之前讲的选择元素，DOM 操作，Ajax 处理，事件处理已涵盖了大部分，但是 jQuery 并非如此简单，它还内置了很多其它方法。同样本篇文章讲的大多还是要基于高级浏览器（IE 9+），可以视作 HTML5 环境吧。
 
 ### 判断是否是对象，数组，函数
 
@@ -484,7 +484,7 @@ $('#one, #two').click(function() {
 });
 {% endhighlight %}
 
-运行效果可以看这里 <a href="https://mblur.com/demos/not-jquery/html-data-1.html" target="_blank">https://mblur.com/demos/not-jquery/html-data-1.html</a>。jQuery 的 `$.data()` 会为每个需要关联数据的元素创建一个 ID，接着把这些 ID 作为属性集合到该元素的 JavaScript 对象上，然后使用这个 ID 去中心对象（jQuery 创建，数据统一储存在这）操作对应的值。用图表示：
+运行效果可以看这里 <a href="https://appblur.com/demos/not-jquery/html-data-1.html" target="_blank">https://appblur.com/demos/not-jquery/html-data-1.html</a>。jQuery 的 `$.data()` 会为每个需要关联数据的元素创建一个 ID，接着把这些 ID 作为属性集合到该元素的 JavaScript 对象上，然后使用这个 ID 去中心对象（jQuery 创建，数据统一储存在这）操作对应的值。用图表示：
 
 ![jquery.data](/files/notjQuery/jquery.data.jpg)
 
@@ -533,7 +533,7 @@ two.addEventListener('click', function() {
 });
 {% endhighlight %}
 
-运行效果可以看这里 <a href="https://mblur.com/demos/not-jquery/html-data-2.html" target="_blank">https://mblur.com/demos/not-jquery/html-data-2.html</a>。这段代码可以在所有的浏览器上运行，思路是，先创建两个函数，一个用于把 ID 关联到元素和关联到存储数据的中心对象，另一个函数负责检索数据。讲真，这一段和 jQuery 比起来实在太糟糕了，像个地狱一样。但是记住，这是运行在所有浏览器上的，所以略显复杂。但是浏览器和 JavaScript 都一直在更新，很多方式实现起来会越来越简单，ECMAScript 6 内置了一个全新的对象 <a href=“https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap” target=“_blank”>WeakMap”</a>，WeakMap 就是简单的键/值映射，但键只能是对象值，不可以是原始值。关于支持情况，WeakMap 支持的偏更高端：IE 11+，Chrome 36+， Safari 7.1 和 Firefox 6+。如果使用该对象实现上述功能，如下：
+运行效果可以看这里 <a href="https://appblur.com/demos/not-jquery/html-data-2.html" target="_blank">https://appblur.com/demos/not-jquery/html-data-2.html</a>。这段代码可以在所有的浏览器上运行，思路是，先创建两个函数，一个用于把 ID 关联到元素和关联到存储数据的中心对象，另一个函数负责检索数据。讲真，这一段和 jQuery 比起来实在太糟糕了，像个地狱一样。但是记住，这是运行在所有浏览器上的，所以略显复杂。但是浏览器和 JavaScript 都一直在更新，很多方式实现起来会越来越简单，ECMAScript 6 内置了一个全新的对象 <a href=“https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap” target=“_blank”>WeakMap”</a>，WeakMap 就是简单的键/值映射，但键只能是对象值，不可以是原始值。关于支持情况，WeakMap 支持的偏更高端：IE 11+，Chrome 36+， Safari 7.1 和 Firefox 6+。如果使用该对象实现上述功能，如下：
 
 {% highlight javascript %}
 var weakMap = new WeakMap(),
@@ -586,4 +586,4 @@ var data = window.WeakMap ? new WeakMap() : (function() {
 
 ### One More Thing
 
-[《或许你不再需要使用 jQuery 了》](https://mblur.com/not-jquery.html) 这个系列，到此结束。希望阁下能够多少受益，天空多灰，我们亦放亮...
+[《或许你不再需要使用 jQuery 了》](https://appblur.com/not-jquery.html) 这个系列，到此结束。希望阁下能够多少受益，天空多灰，我们亦放亮...

@@ -61,8 +61,8 @@ category: notes
         "img": "https://c6.staticflickr.com/2/1626/25531344893_2fbe077ed8_z.jpg",
         "summary": "第二篇摘要总结....",
         "Author": {
-            "name": "Mblur",
-            "website": "https://mblur.com"
+            "name": "appblur",
+            "website": "https://appblur.com"
         }
     }, {
         "id": 2,

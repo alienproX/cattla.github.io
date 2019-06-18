@@ -3,7 +3,7 @@ layout: default
 title: 不使用 jQuery 进行事件处理
 category: not-jquery
 ---
-在 [上一篇文章](https://mblur.com/not-jquery/2016/08/17/ajax-requests-by-pure-javascript.html) 中，讲解了使用纯 JavaScript 进行 Ajax 请求。本集将讲一些关于事件处理的。同样地，会把 jQuery 方式和原生的做个对比。再次强调一点，这个网站并没有唱衰 jQuery 的意思。
+在 [上一篇文章](https://appblur.com/not-jquery/2016/08/17/ajax-requests-by-pure-javascript.html) 中，讲解了使用纯 JavaScript 进行 Ajax 请求。本集将讲一些关于事件处理的。同样地，会把 jQuery 方式和原生的做个对比。再次强调一点，这个网站并没有唱衰 jQuery 的意思。
 
 ### 触发原生（DOM）事件
 

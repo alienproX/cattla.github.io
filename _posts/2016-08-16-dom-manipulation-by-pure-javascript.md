@@ -3,7 +3,7 @@ layout: default
 title: 使用纯 JavaScript 操作 DOM
 category: not-jquery
 ---
-在 [上一篇文章](https://mblur.com/not-jquery/2016/08/14/selecting-elements-without-jquery.html) 中，讲到如何使用浏览器的原生选择器。那么选完元素之后呢，当然是要操作！论操作方式，jQuery 有 `after()`，`append()`，`prepend()`，`before()` 等等这些方法，虽然原生的 API 没有提供这些方法，但是这些方法都是基于原生实现的，所以下面将介绍使用原生的 JavaScript 操作 DOM 的几个主要方法。
+在 [上一篇文章](https://appblur.com/not-jquery/2016/08/14/selecting-elements-without-jquery.html) 中，讲到如何使用浏览器的原生选择器。那么选完元素之后呢，当然是要操作！论操作方式，jQuery 有 `after()`，`append()`，`prepend()`，`before()` 等等这些方法，虽然原生的 API 没有提供这些方法，但是这些方法都是基于原生实现的，所以下面将介绍使用原生的 JavaScript 操作 DOM 的几个主要方法。
 
 ### 创建新元素
 

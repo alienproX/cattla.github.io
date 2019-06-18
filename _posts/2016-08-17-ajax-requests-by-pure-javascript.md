@@ -3,7 +3,7 @@ layout: default
 title: 使用纯 JavaScript 进行 Ajax 请求
 category: not-jquery
 ---
-在 [上一篇文章](https://mblur.com/not-jquery/2016/08/16/dom-manipulation-by-pure-javascript.html) 中，讲到如何使用原生 JavaScript 进行 DOM 操作。 除了 DOM 操作，jQuery 还封装了一个优秀功能，Ajax 请求操作。现在的大多项目中，几乎所有的数据全部基于 Ajax 请求实现，实行前后端分离了嘛，不再像之前 HTML 与动态语言（PHP，Java...）混在一起。那么到后来，Ajax 也有很多高级一点的进化，比如使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API" target="_blank">fetch API</a>，<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise对象</a>。这暂不在本文范畴内，本文讲原始一点的 `XMLHttpRequest` 请求，包括跨域之类的，因为兼容性强嘛。
+在 [上一篇文章](https://appblur.com/not-jquery/2016/08/16/dom-manipulation-by-pure-javascript.html) 中，讲到如何使用原生 JavaScript 进行 DOM 操作。 除了 DOM 操作，jQuery 还封装了一个优秀功能，Ajax 请求操作。现在的大多项目中，几乎所有的数据全部基于 Ajax 请求实现，实行前后端分离了嘛，不再像之前 HTML 与动态语言（PHP，Java...）混在一起。那么到后来，Ajax 也有很多高级一点的进化，比如使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API" target="_blank">fetch API</a>，<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise对象</a>。这暂不在本文范畴内，本文讲原始一点的 `XMLHttpRequest` 请求，包括跨域之类的，因为兼容性强嘛。
 
 ### GET 请求
 
