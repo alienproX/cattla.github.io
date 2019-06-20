@@ -10,7 +10,7 @@ category: swiftui-introduction
 
 举例一个场景：一个输入框（textField），一个视图（UILabel），输入框输入的值同步显示在视图上。使用命令式的话，先需要精确定义两个 UI，然后要写一个函数，在这个函数里，我们需要先读取输入框的值，然后把这个值手动显示到视图上，最后给输入框加一个监听，回调这个函数。也就是我们需要根据输入框的变动情况来改动视图。而声明式则不需要，只需声明视图的值等于输入框的值，至于如何实现不需关心。来看下代码：
 
-###命令式语法 UIKit
+### 命令式语法 UIKit
 
 {% highlight swift %}
 import UIKit
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 {% endhighlight %}
 
 
-###声明式语法 SwiftUI
+### 声明式语法 SwiftUI
 
 {% highlight swift %}
 import SwiftUI
@@ -64,13 +64,11 @@ struct ContentView : View {
 }
 {% endhighlight %}
 
-
-
 命令式 UI 是需要围绕着状态（state）的改变来改变视图，这里的状态可以理解成 “在代码中储存的值/变量”，这会导致很多问题。假如我们有一个视图，它的显示内容是根据一个布尔值来决定的，那么只有两种状态，布尔值的 `true` 跟 `false`，如果我们有两个布尔值 A 和 B，那么则会有四种状态：
 
-A: false, B: false
-A: true,  B: false
-A: false, B: true
+A: false, B: false<br>
+A: true,  B: false<br>
+A: false, B: true<br>
 A: true,  B: true
 
 那如果有三个布尔值呢？四个呢？或者其它整数，字符串，日期..... 围绕着这些状态做逻辑判断，只会导致情况会越来越复杂。相比之下，声明式可以让我们立即告诉应用程序所有可能的状态，需要遵循的所有规则，还有确保 SwiftUI 可以强制执行这些规则。
