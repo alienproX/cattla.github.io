@@ -6,7 +6,7 @@ category: swiftui-introduction
 
 ### 学习 Swift 还是 UIKit ？
 
-目前大多数 iOS 应用程序都是使用 UIKit 编写的，有些则是使用了其它技术栈，比如 React Native， Flutter 等。但是他们有点犯了舍入误差（rounding error），就我们的认知而言，UIKit 和 iOS 应用程序应是齐头并进。
+目前大多数 iOS 应用程序都是使用 UIKit 编写的，有些则是使用了其它技术栈，比如 React Native， Flutter 等，但是他们有点犯了舍入误差（rounding error）的错误，因为就我们的认知而言，UIKit 和 iOS 应用程序应是齐头并进的。
 
 所以如果你忽略了学习 SwiftUI 一年，两年，甚至更长时间，没有人会认为你会因此而丢掉工作，因为 iOS 开发社区也不太可能大规模用最快的速度全部迁移到 SwiftUI，因为大多数公司他们已经在 UIKit 应用程序中投入了大量的人力，时间，金钱，多少都达到了稳定的效果，如果转移到 SwiftUI 会涉及到迁移成本以及未知风险。
 
