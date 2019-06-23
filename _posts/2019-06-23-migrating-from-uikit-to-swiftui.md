@@ -8,7 +8,7 @@ category: swiftui-introduction
 
 看下面这个列表，UIKit 类名跟对应的 SwiftUI：
 
-*  `UITableView` : `List`
+* `UITableView`: `List`
 * `UICollectionView`:  没有对应的 SwiftUI
 * `UILabel`: `Text`
 * `UITextField`: `TextField`
