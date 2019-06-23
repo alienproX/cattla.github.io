@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2.1 SwiftUI 的基础项目模版
-category: swiftui-swiftui-text-images
+category: swiftui-text-images
 ---
 
 首先我们先在 Xcode 创建一个 SwiftUI 项目，步骤如下：
