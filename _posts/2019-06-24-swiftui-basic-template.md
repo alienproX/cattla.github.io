@@ -66,3 +66,14 @@ struct ContentView_Previews : PreviewProvider {
 }
 #endif
 {% endhighlight %}
+
+代码不多，首先注意 `ContentView` 是一个结构体（struct），如果是熟悉 UIKit 的开发者对 struct 并不陌生，我们可以为结构体定义属性（常量、变量）和添加方法，从而扩展结构体的功能。
+
+再者， `ContentView` 符合 `View` 的协议（protocol），在 SwiftUI 展示的所有内容都需遵循 `View` 协议。这实际上只意味着一件事：你需要一个名为 `body` 的属性来返回某种View。
+
+这个 `body` 返回的是 `some View`。`some` 这个关键字是 Swift 5.1 的新特性，默认场景下 protocol 是没有具体类型信息的，但是用 some 修饰后，编译器会让 protocol 的实例类型对外透明。在上述代码中，some 的意思是：它会返回某种 View，符合 `View` 协议的内容，但是 SwiftUI 不需要知道具体返回的是什么，但不能返回空。
+
+最后，在 `ContentView` 下面有一个类似但又不同的结构体 `ContentView_Previews`，它并不符合 `View` 协议，因为它是专门用来在 Xcode 里显示预览视图用的，而不会出现在真实的应用屏幕上。这个结构体被 `#if DEBUG` 和 `#endif` 包围着，意思是这里面的代码只会在调试环境中运行，在成品生产环境中无实际意义。
+
+
+
