@@ -39,4 +39,4 @@ Text("This is an extremely long string that will never fit even the widest of Ph
 {% endhighlight %}
 
 
-更多修改器请参考 Apple 开发文档：https://developer.apple.com/documentation/swiftui/text
+更多修改器请参考 Apple 开发文档：<a href="https://developer.apple.com/documentation/swiftui/text" target="_blank">https://developer.apple.com/documentation/swiftui/text</a>
