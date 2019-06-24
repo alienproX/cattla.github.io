@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2.4 如何在文本视图中使用“过滤器”
+title: 2.4 如何在文本视图中使用 Formatter
 category: swiftui-text-images
 ---
 
