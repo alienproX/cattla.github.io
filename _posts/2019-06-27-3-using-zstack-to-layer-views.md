@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3.2 使用 ZStack 进行 Z 轴排版
+title: 3.3 使用 ZStack 进行重叠排版
 category: swiftui-view-layout
 ---
 
