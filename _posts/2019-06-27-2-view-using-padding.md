@@ -28,7 +28,7 @@ Text("SwiftUI")
     .padding(.bottom, 100)
 {% endhighlight %}
 
-那如果两边，三边呢？ 可以使用 `.init()` 参数，如下：
+那如果两边，三边呢？ 可以使用 `.init()` 参数。如下：
 
 {% highlight swift %}
 Text("SwiftUI")
