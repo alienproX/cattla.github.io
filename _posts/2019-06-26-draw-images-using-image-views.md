@@ -16,6 +16,26 @@ var body: some View {
 
 *example-image* 是图片名称，放置在 `Assets.xcassets` 文件夹里。在这，再次重温下 `some View` 这个关键字，之前学习的 `body` 里都是 `Text`，现在变成了 `Image`，一样正常工作。
 
+SwiftUI 的 `Image` 可以设置不同的缩放，跟 `UIImageView` 的 contentMode 一样。默认情况下，图片的显示大小很可能不符合我们的需求，甚至超过屏幕范围，如果添加 `resizable()` 可以填充到所有的可用空间：
+
+{% highlight swift %}
+var body: some View {
+    Image("example-image")
+        .resizable()
+}
+{% endhighlight %}
+
+但这个填充模式的缺点也很明显，图片被强制拉伸，导致宽高比例失真。如果需要保持宽高比例，需要添加 `aspectRatio` 修改器，并传入 `.fill` 或 `.fit` 参数，如下：
+
+{% highlight swift %}
+Image("example-image")
+    .resizable()
+    .aspectRatio(contentMode: .fill)
+{% endhighlight %}
+
+注意：*在目前的 Xcode 测试版中，存在一个 bug ，使用 .fit 可能会导致图片还是被拉伸。*
+
+
 使用 `Image(systemName:)` 可以加载 Apple 的  San Francisco 字体图标，只需传入图标名称的字符串，如下：
 
 {% highlight swift %}
