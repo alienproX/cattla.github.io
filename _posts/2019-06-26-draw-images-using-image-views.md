@@ -35,6 +35,16 @@ Image("example-image")
 
 注意：*在目前的 Xcode 测试版中，存在一个 bug ，使用 .fit 可能会导致图片还是被拉伸。*
 
+如果需要指定宽高，则可以使用 `.frame(width: 100, height: 100)` 修改器。
+
+{% highlight swift %}
+var body: some View {
+    Image("example-image")
+        .resizable()
+        .frame(width: 100, height: 100)
+}
+{% endhighlight %}
+
 
 使用 `Image(systemName:)` 可以加载 Apple 的  San Francisco 字体图标，只需传入图标名称的字符串，如下：
 
