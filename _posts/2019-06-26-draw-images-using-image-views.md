@@ -32,7 +32,7 @@ var body: some View {
 }
 {% endhighlight %}
 
-更多图标可以参考 <a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/" target="_blank">SF Symbols</a>
+如果要自定义尺寸则可以使用 `.font(.system(size: 64))` 传入字号大小。更多图标可以参考 <a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/" target="_blank">SF Symbols</a>
 
 你也可以载入已经存在的 `UIImage` 视图，记得使用 `return` 关键字：
 
