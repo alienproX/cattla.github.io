@@ -1,5 +1,6 @@
 ---
 layout: default
+title: 3.5 使用 ForEach 循环遍历创建子视图列表
 category: swiftui-view-layout
 ---
 
