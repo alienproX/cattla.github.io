@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4.2 创建一个用状态管理的开关按钮
+title: 4.2 创建一个用状态管理的开关
 category: swiftui-event
 ---
 
