@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4.4 输入框（TextField）获取值，添加边框与占位符文本
+title: 4.4 获取输入框的值并添加边框与占位符
 category: swiftui-event
 ---
 
