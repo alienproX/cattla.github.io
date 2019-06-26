@@ -33,7 +33,7 @@ var body: some View {
 或者使用 SwiftUI 为我们提供的一个 “类型擦除包装器（ type-erased wrapper）“ 叫做 `AnyView `，我们可以做如下操作：
 
 {% highlight swift %}
-var body: AnyView {
+var body: some View {
     if Bool.random() {
         return AnyView(Image("example-image"))
     } else {
