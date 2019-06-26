@@ -4,7 +4,7 @@ title: 3.6 根据屏幕尺寸创建不同的视图
 category: swiftui-view-layout
 ---
 
-SwiftUI 支持 Size Classes ，它可以把屏幕的宽高分成三种情况，紧凑（Compact）和正常（Regular），如下图所示：
+SwiftUI 支持 Size Classes ，它可以把屏幕的宽高分成紧凑（Compact）和正常（Regular），如下图所示：
 
 ![Size Classes](/files/swiftUI/size.jpg)
 
