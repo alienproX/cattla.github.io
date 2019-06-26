@@ -71,7 +71,7 @@ struct ContentView_Previews : PreviewProvider {
 
 再者， `ContentView` 符合 `View` 的协议（protocol），在 SwiftUI 展示的所有内容都需遵循 `View` 协议。这实际上只意味着一件事：你需要一个名为 `body` 的属性来返回某种View。
 
-这个 `body` 返回的是 `some View`。`some` 这个关键字是 Swift 5.1 的新特性<a href="https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md" target="_blank">Opaque Result Types</a>。默认场景下 View 协议是没有具体类型信息的，只有类型约束，但是用 some 修饰后，编译器会让 protocol 的实例类型对外透明，。在上述代码中，some 的意思是：它会返回某种 View（Text, Image...），符合 `View` 的协议内容，但是 SwiftUI 不需要知道具体返回的是什么，当然不能返回空。
+这个 `body` 返回的是 `some View`。`some` 这个关键字是 Swift 5.1 的新特性<a href="https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md" target="_blank">Opaque Result Types</a>。默认场景下 View 协议是没有具体类型信息的，只有类型约束，但是用 some 修饰后，编译器会让 protocol 的实例类型对外透明，。在上述代码中，some 的意思是：它会返回某种 View（Text, Image...），符合 `View` 的协议内容，但是 SwiftUI 不需要知道具体返回的是什么，当然不能返回空，也不能随机返回。
 
 最后，在 `ContentView` 下面有一个类似但又不同的结构体 `ContentView_Previews`，它并不符合 `View` 协议，因为它是专门用来在 Xcode 里显示预览视图用的，而不会出现在真实的应用屏幕上。这个结构体被 `#if DEBUG` 和 `#endif` 包围着，意思是这里面的代码只会在调试环境中运行，在成品生产环境中无实际意义。
 
