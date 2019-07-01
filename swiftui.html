@@ -66,3 +66,15 @@ thumbnail_image: '/files/notjQuery/notjQuery.png'
 </div>
 
 
+<div> 
+    <h3>5. 列表视图</h3>
+    <ul class="postList">
+        {% for post in site.categories.swiftui-lists reversed %}
+        <li>
+            <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            <div><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+        </li>
+        {% endfor %}
+    </ul>        
+</div>
+
