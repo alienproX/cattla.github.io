@@ -25,7 +25,7 @@ struct DetailView : View {
 struct ContentView : View {
     var body: some View {
         NavigationView {
-            NavigationView(destination: DetailView()) {
+            NavigationButton(destination: DetailView()) {
                 Text("Click")
             }.navigationBarTitle(Text("Navigation"))
         }
