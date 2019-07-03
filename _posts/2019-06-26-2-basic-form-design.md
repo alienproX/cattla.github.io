@@ -39,6 +39,8 @@ struct ContentView : View {
 }
 {% endhighlight %}
 
+注意一点，Xcode 11 至少需要 betea 2 (2019-06-18 release) 及以上版本才支持 `Form` 视图容器。
+
 运行该代码时，可以看到两个对表单行为比较重要的事情：
 
 * 在 iOS 平台上，表单视图会自动采用分组列表的的样式，因此用户可以看到这个表单是可以滚动的。
