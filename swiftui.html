@@ -79,7 +79,7 @@ thumbnail_image: '/files/notjQuery/notjQuery.png'
 </div>
 
 <div> 
-<h3>7. 表单视图</h3>
+    <h3>7. 表单视图</h3>
     <ul class="postList">
         {% for post in site.categories.swiftui-forms reversed %}
         <li>
@@ -91,9 +91,21 @@ thumbnail_image: '/files/notjQuery/notjQuery.png'
 </div>
 
 <div> 
-<h3>8. 视图容器</h3>
+    <h3>8. 视图容器</h3>
     <ul class="postList">
         {% for post in site.categories.swiftui-containers reversed %}
+        <li>
+            <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            <div><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+        </li>
+        {% endfor %}
+    </ul>        
+</div>
+
+<div> 
+    <h3>9. Alert 和 Action Sheet 对话框</h3>
+    <ul class="postList">
+        {% for post in site.categories.swiftui-alert reversed %}
         <li>
             <span>{{ post.date | date: "%Y-%m-%d" }}</span>
             <div><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
