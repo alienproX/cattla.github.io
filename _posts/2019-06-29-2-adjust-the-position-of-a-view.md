@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 11.2 给视图定位
+title: 11.2 使用 offset() 给视图定位
 category: swiftui-transform
 ---
 
