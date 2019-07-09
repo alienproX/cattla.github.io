@@ -19,7 +19,7 @@ Text("EPISODE LLVM")
 
 是的，跟《星球大战》的字幕效果一样。
 
-如果需要修改旋转中心，则可以再加个参数：
+如果需要修改旋转中心，则可以再加个锚点参数：
 
 {% highlight swift %}
 .rotation3DEffect(.degrees(45), axis: (x: 1, y: 0, z: 100), anchor: UnitPoint(x: 0, y: 0))

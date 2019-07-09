@@ -38,7 +38,7 @@ struct ContentView: View {
 }
 {% endhighlight %}
 
-默认情况下，旋转都是围绕视图中心来转的，如果要从特定的坐标来作为旋转圆心，额外添加一个 `anchor` 参数就可以，比如想让视图以左上角为中心旋转，代码如下：
+默认情况下，旋转都是围绕视图中心来转的，如果要从特定的坐标来作为旋转圆心，额外添加一个 `anchor` 锚点参数就可以，比如想让视图以左上角为中心旋转，代码如下：
 
 {% highlight swift %}
 struct ContentView: View {
