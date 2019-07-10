@@ -9,8 +9,8 @@ category: swiftui-transform
 
 {% highlight swift %}
 ZStack {
-    Image("paul-hudson")
     Image("example-image")
+    Image("example-image1")
         .blendMode(.multiply)
 }
 {% endhighlight %}
