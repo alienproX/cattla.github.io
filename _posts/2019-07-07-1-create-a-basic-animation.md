@@ -31,7 +31,6 @@ struct ContentView: View {
 Text("Tap here")
     .scaleEffect(scale)
     .animation(.basic(duration: 3))
-
 {% endhighlight %}
 
 除了转场时间，还可以设定动画曲线（curve），在 `.easeIn`、`.easeOut`、`.easeInOut` 和 `.custom` 之间进行选择，`.custom`可以自定义曲线。
