@@ -137,3 +137,16 @@ thumbnail_image: '/files/notjQuery/notjQuery.png'
         {% endfor %}
     </ul>        
 </div>
+
+<div> 
+    <h3>12. 视图动画</h3>
+    <ul class="postList">
+        {% for post in site.categories.swiftui-animation reversed %}
+        <li>
+            <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            <div><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+        </li>
+        {% endfor %}
+    </ul>        
+</div>
+
