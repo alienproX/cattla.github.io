@@ -1,3 +1,11 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Menlo, Monaco, 'Courier New', monospace";
+  line-height: 1.5;
+}
 td.hljs-ln-numbers {
     text-align: center;
     color: #ccc;
@@ -24,4 +32,6 @@ code {
 .hljs {
   white-space: pre;
   overflow-x: auto;
+  padding: 0!important;
+  font-size: 13px!important;
 }
