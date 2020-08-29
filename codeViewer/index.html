@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+        <link rel="stylesheet" href="styles/line.css" />
+        <script src="highlight.pack.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js"></script>
+        <script>
+          hljs.initHighlightingOnLoad();
+          hljs.initLineNumbersOnLoad();
+      </script>
+    </head>
+    <body>
+      <pre class='hljs'>
+        <code>
+
+import SwiftUI
+
+struct BorderView: View {
+  
+  private var paddingLeft: CGFloat = 0
+  private var height: CGFloat = 0
+  private var color: Color = Color._tableBorder
+  
+  init(_ paddingLeft: CGFloat = 0, color: Color = Color._tableBorder, height: CGFloat = 0.5) {
+      self.paddingLeft = paddingLeft
+      self.height = height
+      self.color = color
+  }
+  
+  var body: some View {
+      Rectangle()
+          .fill(color)
+          .frame(maxWidth: .infinity, minHeight: self.height, maxHeight: self.height, alignment: .center)
+          .padding(.leading, self.paddingLeft)
+  }
+}
+        
+        </code>
+      </pre>
+    </body>
+    <script type="text/javascript">
+    </script>
+    
+
+</html>

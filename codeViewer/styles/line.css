@@ -1,0 +1,27 @@
+td.hljs-ln-numbers {
+    text-align: center;
+    color: #ccc;
+    border-right: 1px solid #d6d6d6;
+    vertical-align: top;
+    padding-right: 4px!important;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+td.hljs-ln-code {
+    padding-left: 10px!important;
+}
+
+code {
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+.hljs {
+  white-space: pre;
+  overflow-x: auto;
+}
