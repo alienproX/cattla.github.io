@@ -5,7 +5,8 @@ html {
 body {
   font-family: "Menlo, Monaco, 'Courier New', monospace";
   line-height: 1.5;
-  font-size: 12px!important;
+  font-size: 13px!important;
+  webkitTextSizeAdjust: 100%;
 }
 td.hljs-ln-numbers {
     text-align: center;
@@ -34,5 +35,5 @@ code {
   white-space: pre;
   overflow-x: auto;
   padding: 0!important;
-  font-size: 12px!important;
+  font-size: 14px!important;
 }
